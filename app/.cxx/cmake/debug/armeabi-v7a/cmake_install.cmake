@@ -1,4 +1,4 @@
-# Install script for directory: D:/soft/Project/projectForGit/MVVM_ijk/app
+# Install script for directory: D:/soft/Project/projectForGit/mvvm_jkplayer/app
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/soft/Project/projectForGit/MVVM_ijk/app/.cxx/cmake/debug/armeabi-v7a/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/soft/Project/projectForGit/mvvm_jkplayer/app/.cxx/cmake/debug/armeabi-v7a/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

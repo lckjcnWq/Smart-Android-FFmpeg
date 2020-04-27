@@ -1,17 +1,8 @@
 
-#include "common.h"
 #include <jni.h>
 #include <string>
 #include <android/log.h>
-
-extern "C" {
-#include "libavutil/avutil.h"
-#include "libavformat/avformat.h"
-#include "libavdevice/avdevice.h"
-#include "libavcodec/avcodec.h"
-#include "libswscale/swscale.h"
-#include "libswresample/swresample.h"
-}
+#include "common.h"
 
 using namespace std;
 //暂时用全局变量，后面再抽取优化

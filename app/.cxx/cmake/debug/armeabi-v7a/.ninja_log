@@ -1,5 +1,5 @@
 # ninja log v5
-43	574	609675989	CMakeFiles/vedio_lib.dir/src/main/cpp/vedio_lib.cpp.o	b7157bc78f5a08f4
-1	591	609675989	CMakeFiles/audio_lib.dir/src/main/cpp/audio_lib.cpp.o	1c32b183942ae891
-575	798	609675989	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libvedio_lib.so	87c28e182bb40c14
-798	1025	609675989	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libaudio_lib.so	db53dee57d687e9a
+0	601	609676937	CMakeFiles/audio_lib.dir/src/main/cpp/audio_lib.cpp.o	1c32b183942ae891
+6	1007	609677022	CMakeFiles/vedio_lib.dir/src/main/cpp/vedio_lib.cpp.o	b7157bc78f5a08f4
+1007	1221	609677022	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libvedio_lib.so	87c28e182bb40c14
+1221	1456	609677022	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libaudio_lib.so	db53dee57d687e9a
