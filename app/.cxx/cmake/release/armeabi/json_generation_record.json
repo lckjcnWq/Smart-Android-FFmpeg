@@ -1,0 +1,542 @@
+[
+  {
+    "level": "INFO",
+    "message": "Start JSON generation. Platform version: 21 min SDK version: armeabi",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "No CMake version was specified in build.gradle. Using default version 3.10.2.",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Trying to locate CMake in local SDK repository.",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\build-tools\\21.1.2\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\build-tools\\22.0.1\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\build-tools\\23.0.1\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\build-tools\\23.0.2\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\build-tools\\23.0.3\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\build-tools\\25.0.0\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\build-tools\\25.0.2\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\build-tools\\25.0.3\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\build-tools\\26.0.2\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\build-tools\\27.0.3\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\build-tools\\28.0.3\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\build-tools\\29.0.1\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\build-tools\\29.0.2\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\cmake\\3.10.2.4988404\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\cmake\\3.6.4111459\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\emulator\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\extras\\android\\m2repository\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\extras\\google\\google_play_services\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\extras\\google\\instantapps\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\extras\\google\\m2repository\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\extras\\google\\market_apk_expansion\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\extras\\google\\market_licensing\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\extras\\google\\usb_driver\\usb_driver\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "WARN",
+    "message": "Observed package id \u0027extras;google;usb_driver\u0027 in inconsistent location \u0027D:\\soft\\Android\\sdk\\extras\\google\\usb_driver\\usb_driver\u0027 (Expected \u0027D:\\soft\\Android\\sdk\\extras\\google\\usb_driver\u0027)",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\extras\\intel\\Hardware_Accelerated_Execution_Manager\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\extras\\m2repository\\com\\android\\support\\constraint\\constraint-layout-solver\\1.0.0-alpha7\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\extras\\m2repository\\com\\android\\support\\constraint\\constraint-layout-solver\\1.0.0-beta4\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\extras\\m2repository\\com\\android\\support\\constraint\\constraint-layout-solver\\1.0.2\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\extras\\m2repository\\com\\android\\support\\constraint\\constraint-layout\\1.0.0-alpha7\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\extras\\m2repository\\com\\android\\support\\constraint\\constraint-layout\\1.0.0-beta4\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\extras\\m2repository\\com\\android\\support\\constraint\\constraint-layout\\1.0.2\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\lldb\\3.1\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\ndk-bundle\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\ndk\\21.1.6352462\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\patcher\\v4\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\platform-tools\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\platforms\\android-14\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\platforms\\android-19\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\platforms\\android-21\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\platforms\\android-22\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\platforms\\android-23\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\platforms\\android-24\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\platforms\\android-25\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\platforms\\android-26\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\platforms\\android-27\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\platforms\\android-28\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\platforms\\android-29\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing legacy package: D:\\soft\\Android\\sdk\\platforms\\platforms\\android-19",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\sources\\android-19\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\sources\\android-22\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\sources\\android-24\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\sources\\android-25\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\sources\\android-26\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\sources\\android-27\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\sources\\android-28\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\sources\\android-29\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\system-images\\android-19\\default\\armeabi-v7a\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\system-images\\android-19\\default\\x86\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\system-images\\android-24\\google_apis\\x86\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Parsing D:\\soft\\Android\\sdk\\tools\\package.xml",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "- CMake found in SDK at \u0027D:\\soft\\Android\\sdk\\cmake\\3.10.2.4988404\u0027 had version \u00273.10.2\u0027",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "CMake \u00273.6.0\u0027 found in SDK did not match requested version \u00273.10.2\u0027.",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "rebuilding JSON D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\.cxx\\cmake\\release\\armeabi\\android_gradle_build.json due to:",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "- expected json D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\.cxx\\cmake\\release\\armeabi\\android_gradle_build.json file is not present, will remove stale json folder",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "- missing previous command file D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\.cxx\\cmake\\release\\armeabi\\build_command.txt, will remove stale json folder",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "- command changed from previous, will remove stale json folder",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "created folder \u0027D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\.cxx\\cmake\\release\\armeabi\u0027",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "executing cmake Executable : D:\\soft\\Android\\sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe\narguments : \n-HD:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\n-DCMAKE_BUILD_TYPE\u003dRelease\n-DCMAKE_TOOLCHAIN_FILE\u003dD:\\soft\\Android\\sdk\\ndk\\21.1.6352462\\build\\cmake\\android.toolchain.cmake\n-DANDROID_ABI\u003darmeabi\n-DANDROID_NDK\u003dD:\\soft\\Android\\sdk\\ndk\\21.1.6352462\n-DANDROID_PLATFORM\u003dandroid-21\n-DCMAKE_ANDROID_ARCH_ABI\u003darmeabi\n-DCMAKE_ANDROID_NDK\u003dD:\\soft\\Android\\sdk\\ndk\\21.1.6352462\n-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON\n-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003dD:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\build\\intermediates\\cmake\\release\\obj\\armeabi\n-DCMAKE_MAKE_PROGRAM\u003dD:\\soft\\Android\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe\n-DCMAKE_SYSTEM_NAME\u003dAndroid\n-DCMAKE_SYSTEM_VERSION\u003d21\n-BD:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\.cxx\\cmake\\release\\armeabi\n-GNinja\njvmArgs : \n\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "[\u003d\u003d \"CMake Server\" \u003d\u003d[\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"supportedProtocolVersions\":[{\"isExperimental\":true,\"major\":1,\"minor\":1}],\"type\":\"hello\"}\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "]\u003d\u003d \"CMake Server\" \u003d\u003d]\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "{\n  \"type\": \"handshake\",\n  \"cookie\": \"gradle-cmake-cookie\",\n  \"protocolVersion\": {\n    \"isExperimental\": true,\n    \"major\": 1,\n    \"minor\": 1\n  },\n  \"sourceDirectory\": \"D:/soft/Project/projectForGit/FFmpegdemo/FFmpegdemo/app\",\n  \"buildDirectory\": \"D:/soft/Project/projectForGit/FFmpegdemo/FFmpegdemo/app/.cxx/cmake/release/armeabi\",\n  \"generator\": \"Ninja\"\n}\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"gradle-cmake-cookie\",\"inReplyTo\":\"handshake\",\"type\":\"reply\"}\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "{\n  \"type\": \"configure\",\n  \"cacheArguments\": [\n    \"\",\n    \"-DCMAKE_BUILD_TYPE\\u003dRelease\",\n    \"-DCMAKE_TOOLCHAIN_FILE\\u003dD:\\\\soft\\\\Android\\\\sdk\\\\ndk\\\\21.1.6352462\\\\build\\\\cmake\\\\android.toolchain.cmake\",\n    \"-DANDROID_ABI\\u003darmeabi\",\n    \"-DANDROID_NDK\\u003dD:\\\\soft\\\\Android\\\\sdk\\\\ndk\\\\21.1.6352462\",\n    \"-DANDROID_PLATFORM\\u003dandroid-21\",\n    \"-DCMAKE_ANDROID_ARCH_ABI\\u003darmeabi\",\n    \"-DCMAKE_ANDROID_NDK\\u003dD:\\\\soft\\\\Android\\\\sdk\\\\ndk\\\\21.1.6352462\",\n    \"-DCMAKE_EXPORT_COMPILE_COMMANDS\\u003dON\",\n    \"-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\\u003dD:\\\\soft\\\\Project\\\\projectForGit\\\\FFmpegdemo\\\\FFmpegdemo\\\\app\\\\build\\\\intermediates\\\\cmake\\\\release\\\\obj\\\\armeabi\",\n    \"-DCMAKE_MAKE_PROGRAM\\u003dD:\\\\soft\\\\Android\\\\sdk\\\\cmake\\\\3.10.2.4988404\\\\bin\\\\ninja.exe\",\n    \"-DCMAKE_SYSTEM_NAME\\u003dAndroid\",\n    \"-DCMAKE_SYSTEM_VERSION\\u003d21\"\n  ]\n}\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"CMake Error at D:/soft/Android/Sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake:174 (message):\\n  armeabi is no longer supported.  Use armeabi-v7a.\\nCall Stack (most recent call first):\\n  D:/soft/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineSystem.cmake:94 (include)\\n  CMakeLists.txt\\n\\n\",\"title\":\"Error\",\"type\":\"message\"}\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "ERROR",
+    "message": "CMake Error at D:/soft/Android/Sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake:174 (message):\r\n  armeabi is no longer supported.  Use armeabi-v7a.\r\nCall Stack (most recent call first):\r\n  D:/soft/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineSystem.cmake:94 (include)\r\n  CMakeLists.txt\r\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"CMake Error: CMAKE_C_COMPILER not set, after EnableLanguage\",\"title\":\"Error\",\"type\":\"message\"}\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "ERROR",
+    "message": "CMake Error: CMAKE_C_COMPILER not set, after EnableLanguage",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"CMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage\",\"title\":\"Error\",\"type\":\"message\"}\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "ERROR",
+    "message": "CMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":1000,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Configuring incomplete, errors occurred!\",\"type\":\"message\"}\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Configuring incomplete, errors occurred!",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"errorMessage\":\"Configuration failed.\",\"inReplyTo\":\"configure\",\"type\":\"error\"}\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "ERROR",
+    "message": "Configuration failed.",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "JSON generation completed with problem. Exception: com.android.ide.common.process.ProcessException: Error configuring CMake server (D:\\soft\\Android\\sdk\\cmake\\3.10.2.4988404\\bin).\r\nCMake Error at D:/soft/Android/Sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake:174 (message):\n  armeabi is no longer supported.  Use armeabi-v7a.\nCall Stack (most recent call first):\n  D:/soft/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineSystem.cmake:94 (include)\n  CMakeLists.txt\n\n\nCMake Error: CMAKE_C_COMPILER not set, after EnableLanguage\nCMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage\nConfiguring incomplete, errors occurred!\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "release|armeabi"
+  }
+]

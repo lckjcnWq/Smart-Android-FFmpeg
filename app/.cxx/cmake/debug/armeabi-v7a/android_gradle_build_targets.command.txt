@@ -1,0 +1,8 @@
+Executable : D:\soft\Android\sdk\cmake\3.10.2.4988404\bin\ninja.exe
+arguments : 
+-C
+D:\soft\Project\projectForGit\MVVM_ijk\app\.cxx\cmake\debug\armeabi-v7a
+audio_lib
+vedio_lib
+jvmArgs : 
+

@@ -1,0 +1,188 @@
+[
+  {
+    "level": "INFO",
+    "message": "Start JSON generation. Platform version: 21 min SDK version: armeabi",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "No CMake version was specified in build.gradle. Using default version 3.10.2.",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Trying to locate CMake in local SDK repository.",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "- CMake found in SDK at \u0027D:\\soft\\Android\\sdk\\cmake\\3.10.2.4988404\u0027 had version \u00273.10.2\u0027",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "CMake \u00273.6.0\u0027 found in SDK did not match requested version \u00273.10.2\u0027.",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "rebuilding JSON D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\.cxx\\cmake\\debug\\armeabi\\android_gradle_build.json due to:",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "- expected json D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\.cxx\\cmake\\debug\\armeabi\\android_gradle_build.json file is not present, will remove stale json folder",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "- missing previous command file D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\.cxx\\cmake\\debug\\armeabi\\build_command.txt, will remove stale json folder",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "- command changed from previous, will remove stale json folder",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "removing stale contents from \u0027D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\.cxx\\cmake\\debug\\armeabi\u0027",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "created folder \u0027D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\.cxx\\cmake\\debug\\armeabi\u0027",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "executing cmake Executable : D:\\soft\\Android\\sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe\narguments : \n-HD:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\n-DCMAKE_BUILD_TYPE\u003dDebug\n-DCMAKE_TOOLCHAIN_FILE\u003dD:\\soft\\Android\\sdk\\ndk\\21.1.6352462\\build\\cmake\\android.toolchain.cmake\n-DANDROID_ABI\u003darmeabi\n-DANDROID_NDK\u003dD:\\soft\\Android\\sdk\\ndk\\21.1.6352462\n-DANDROID_PLATFORM\u003dandroid-21\n-DCMAKE_ANDROID_ARCH_ABI\u003darmeabi\n-DCMAKE_ANDROID_NDK\u003dD:\\soft\\Android\\sdk\\ndk\\21.1.6352462\n-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON\n-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003dD:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\build\\intermediates\\cmake\\debug\\obj\\armeabi\n-DCMAKE_MAKE_PROGRAM\u003dD:\\soft\\Android\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe\n-DCMAKE_SYSTEM_NAME\u003dAndroid\n-DCMAKE_SYSTEM_VERSION\u003d21\n-BD:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\.cxx\\cmake\\debug\\armeabi\n-GNinja\njvmArgs : \n\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "[\u003d\u003d \"CMake Server\" \u003d\u003d[\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"supportedProtocolVersions\":[{\"isExperimental\":true,\"major\":1,\"minor\":1}],\"type\":\"hello\"}\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "]\u003d\u003d \"CMake Server\" \u003d\u003d]\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "{\n  \"type\": \"handshake\",\n  \"cookie\": \"gradle-cmake-cookie\",\n  \"protocolVersion\": {\n    \"isExperimental\": true,\n    \"major\": 1,\n    \"minor\": 1\n  },\n  \"sourceDirectory\": \"D:/soft/Project/projectForGit/FFmpegdemo/FFmpegdemo/app\",\n  \"buildDirectory\": \"D:/soft/Project/projectForGit/FFmpegdemo/FFmpegdemo/app/.cxx/cmake/debug/armeabi\",\n  \"generator\": \"Ninja\"\n}\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"gradle-cmake-cookie\",\"inReplyTo\":\"handshake\",\"type\":\"reply\"}\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "{\n  \"type\": \"configure\",\n  \"cacheArguments\": [\n    \"\",\n    \"-DCMAKE_BUILD_TYPE\\u003dDebug\",\n    \"-DCMAKE_TOOLCHAIN_FILE\\u003dD:\\\\soft\\\\Android\\\\sdk\\\\ndk\\\\21.1.6352462\\\\build\\\\cmake\\\\android.toolchain.cmake\",\n    \"-DANDROID_ABI\\u003darmeabi\",\n    \"-DANDROID_NDK\\u003dD:\\\\soft\\\\Android\\\\sdk\\\\ndk\\\\21.1.6352462\",\n    \"-DANDROID_PLATFORM\\u003dandroid-21\",\n    \"-DCMAKE_ANDROID_ARCH_ABI\\u003darmeabi\",\n    \"-DCMAKE_ANDROID_NDK\\u003dD:\\\\soft\\\\Android\\\\sdk\\\\ndk\\\\21.1.6352462\",\n    \"-DCMAKE_EXPORT_COMPILE_COMMANDS\\u003dON\",\n    \"-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\\u003dD:\\\\soft\\\\Project\\\\projectForGit\\\\FFmpegdemo\\\\FFmpegdemo\\\\app\\\\build\\\\intermediates\\\\cmake\\\\debug\\\\obj\\\\armeabi\",\n    \"-DCMAKE_MAKE_PROGRAM\\u003dD:\\\\soft\\\\Android\\\\sdk\\\\cmake\\\\3.10.2.4988404\\\\bin\\\\ninja.exe\",\n    \"-DCMAKE_SYSTEM_NAME\\u003dAndroid\",\n    \"-DCMAKE_SYSTEM_VERSION\\u003d21\"\n  ]\n}\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"CMake Error at D:/soft/Android/Sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake:174 (message):\\n  armeabi is no longer supported.  Use armeabi-v7a.\\nCall Stack (most recent call first):\\n  D:/soft/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineSystem.cmake:94 (include)\\n  CMakeLists.txt\\n\\n\",\"title\":\"Error\",\"type\":\"message\"}\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "ERROR",
+    "message": "CMake Error at D:/soft/Android/Sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake:174 (message):\r\n  armeabi is no longer supported.  Use armeabi-v7a.\r\nCall Stack (most recent call first):\r\n  D:/soft/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineSystem.cmake:94 (include)\r\n  CMakeLists.txt\r\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"CMake Error: CMAKE_C_COMPILER not set, after EnableLanguage\",\"title\":\"Error\",\"type\":\"message\"}\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "ERROR",
+    "message": "CMake Error: CMAKE_C_COMPILER not set, after EnableLanguage",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"CMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage\",\"title\":\"Error\",\"type\":\"message\"}\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "ERROR",
+    "message": "CMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":1000,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Configuring incomplete, errors occurred!\",\"type\":\"message\"}\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "Configuring incomplete, errors occurred!",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"errorMessage\":\"Configuration failed.\",\"inReplyTo\":\"configure\",\"type\":\"error\"}\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "ERROR",
+    "message": "Configuration failed.",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  },
+  {
+    "level": "INFO",
+    "message": "JSON generation completed with problem. Exception: com.android.ide.common.process.ProcessException: Error configuring CMake server (D:\\soft\\Android\\sdk\\cmake\\3.10.2.4988404\\bin).\r\nCMake Error at D:/soft/Android/Sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake:174 (message):\n  armeabi is no longer supported.  Use armeabi-v7a.\nCall Stack (most recent call first):\n  D:/soft/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineSystem.cmake:94 (include)\n  CMakeLists.txt\n\n\nCMake Error: CMAKE_C_COMPILER not set, after EnableLanguage\nCMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage\nConfiguring incomplete, errors occurred!\n",
+    "file": "D:\\soft\\Project\\projectForGit\\FFmpegdemo\\FFmpegdemo\\app\\CMakeLists.txt",
+    "tag": "debug|armeabi"
+  }
+]

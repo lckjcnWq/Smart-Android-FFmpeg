@@ -1,0 +1,2 @@
+ninja: Entering directory `D:\soft\Project\projectForGit\MVVM_ijk\app\.cxx\cmake\debug\armeabi-v7a'
+ninja: no work to do.

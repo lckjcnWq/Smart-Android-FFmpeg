@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MVVM_ijk.iml" filepath="$PROJECT_DIR$/MVVM_ijk.iml" group="MVVM_ijk" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="MVVM_ijk/app" />
+      <module fileurl="file://$PROJECT_DIR$/mvvmlin/mvvmlin.iml" filepath="$PROJECT_DIR$/mvvmlin/mvvmlin.iml" group="MVVM_ijk/mvvmlin" />
+    </modules>
+  </component>
+</project>
