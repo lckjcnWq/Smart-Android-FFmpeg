@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.4.1)
 add_library( audio_lib
              SHARED
              src/main/cpp/audio_lib.cpp
-             )
+        )
 add_library( vedio_lib
              SHARED
              src/main/cpp/vedio_lib.cpp

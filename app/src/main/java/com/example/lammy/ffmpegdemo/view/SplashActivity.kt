@@ -23,7 +23,7 @@ class SplashActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
     }
 
     private fun applyPermissions() {
-        XXPermissions.with(this) // 可设置被拒绝后继续申请，直到用户授权或者永久拒绝
+        XXPermissions.with(this)
                 .constantRequest()
                 .permission(Permission.Group.STORAGE)
                 .request(object : OnPermission {
