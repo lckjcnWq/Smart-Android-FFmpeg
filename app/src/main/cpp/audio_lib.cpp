@@ -52,26 +52,11 @@ Java_com_example_lammy_ffmpegdemo_util_FFmpegUtil_getAudioMp3Info(JNIEnv *env, j
     int audio_stream_idx;
     AVStream *audio_stream;
     const char *url = env->GetStringUTFChars(url_, 0);
-
-    //初始化组件
-    av_register_all();
-    int open_res = avformat_open_input(&avFormatContext, url, NULL, NULL);
-    if(open_res!=0){
-        SLOG("lxb->Can't open file: %s", av_err2str(open_res));
-        return ;
-    }
-
-    //获取文件信息
-    int find_steam_info_res = avformat_find_stream_info(avFormatContext, NULL);
-    if(find_steam_info_res<0){
-        SLOG("lxb->Find stream info error: %s", av_err2str(find_steam_info_res));
-        goto __avformat_close;
-    }
+    avFormatContext=initFormatCnontext(url);
 
     //获取采样率和通道
     audio_stream_idx =av_find_best_stream(avFormatContext,AVMediaType::AVMEDIA_TYPE_AUDIO, -1, -1, NULL, 0);
     if (audio_stream_idx < 0) {
-        printf("lxb->Find audio stream info error: %s",av_err2str(find_steam_info_res));
         goto __avformat_close;
     }
     audio_stream = avFormatContext->streams[audio_stream_idx];
@@ -157,7 +142,6 @@ Java_com_example_lammy_ffmpegdemo_util_FFmpegUtil_nativeAudioPlay(JNIEnv *env, j
                 memcpy(jPcmData, resampleOutBuffer, dataSize);
 
                 jbyteArray jPcmDataArray = env->NewByteArray(dataSize);
-                // native 创建 c 数组
                 jPcmData = env->GetByteArrayElements(jPcmDataArray, NULL);
                 // 同步刷新到 jbyteArray ，并释放 C/C++ 数组
                 env->ReleaseByteArrayElements(jPcmDataArray, jPcmData, 0);
