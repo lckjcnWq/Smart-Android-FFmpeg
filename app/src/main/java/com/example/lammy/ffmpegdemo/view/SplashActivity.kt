@@ -41,7 +41,7 @@ class SplashActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
 
         btn_medio_about.setOnClickListener(View.OnClickListener {
             val inte=Intent()
-            inte.setClass(this,MedioActivity::class.java)
+            inte.setClass(this,VideoActivity::class.java)
             startActivity(inte)
         })
     }

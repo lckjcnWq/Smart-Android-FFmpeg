@@ -5,11 +5,6 @@ add_library( audio_lib
              SHARED
              src/main/cpp/audio_lib.cpp
         )
-add_library( vedio_lib
-             SHARED
-             src/main/cpp/vedio_lib.cpp
-             )
-
 include_directories(libs/include)
 #设置so的路径
 set(ffmpeg_DIR ${CMAKE_SOURCE_DIR}/libs)
@@ -72,7 +67,6 @@ find_library(
 
 target_link_libraries(
                        audio_lib
-                       vedio_lib
                        avfilter-6  #滤镜特效处理
                        avformat-57 #封装格式处理
                        avcodec-57  #编解码

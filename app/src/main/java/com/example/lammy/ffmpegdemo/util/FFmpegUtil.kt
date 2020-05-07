@@ -21,10 +21,12 @@ object FFmpegUtil {
     @JvmStatic
     external fun nativeAudioPlay(path: String)
 
+    @JvmStatic
+    external fun videoH264Encode()
+
     //视频相关
 
     init {
-        System.loadLibrary("audio_lib")
         System.loadLibrary("audio_lib")
         System.loadLibrary("avfilter-6")
         System.loadLibrary("avformat-57")

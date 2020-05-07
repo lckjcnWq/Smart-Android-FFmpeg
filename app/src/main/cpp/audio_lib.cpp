@@ -175,3 +175,88 @@ Java_com_example_lammy_ffmpegdemo_util_FFmpegUtil_nativeAudioPlay(JNIEnv *env, j
     env->ReleaseStringUTFChars(url_, url);
 }
 
+int rec_status = 0;
+
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_example_lammy_ffmpegdemo_util_FFmpegUtil_videoH264Encode(JNIEnv *env, jclass clazz) {
+    int ret = 0;
+    int base = 0;
+    //pakcet
+    AVPacket pkt;
+    AVFormatContext *fmt_ctx = NULL;
+    AVCodecContext *enc_ctx = NULL;
+
+    //set log level
+    av_log_set_level(AV_LOG_DEBUG);
+
+    //start record
+    rec_status = 1;
+
+    //create file
+    char *yuvout = "/sdcard/vedio1.yuv";
+    char *out = "/sdcard/vedio1.h264";
+
+    FILE *yuvoutfile = fopen(yuvout, "wb+");
+    FILE *outfile = fopen(out, "wb+");
+
+    //打开设备
+    fmt_ctx = open_dev();
+
+    //打开编码器
+    open_encoder(V_WIDTH, V_HEIGTH, &enc_ctx);
+
+    //创建 AVFrame
+    AVFrame* frame = create_frame(V_WIDTH, V_HEIGTH);
+
+    //创建编码后输出的Packet
+    AVPacket *newpkt = av_packet_alloc();
+    if(!newpkt){
+        printf("Error, Failed to alloc avpacket!\n");
+        goto __ERROR;
+    }
+
+    //read data from device
+    while((ret = av_read_frame(fmt_ctx, &pkt)) == 0 &&
+          rec_status) {
+
+        int i =0;
+
+        av_log(NULL, AV_LOG_INFO,
+               "packet size is %d(%p)\n",
+               pkt.size, pkt.data);
+
+        //（宽 x 高）x (yuv420=1.5/yuv422=2/yuv444=3)
+        //YYYYYYYYUVVU NV12
+        //YYYYYYYYUUVV YUV420
+        memcpy(frame->data[0], pkt.data, 518400); //copy Y data
+        //518400之后，是UV
+        for(i=0; i < 518400/4; i++){
+            frame->data[1][i] = pkt.data[518400+i*2];
+            frame->data[2][i] = pkt.data[518401+i*2];
+        }
+
+        fwrite(frame->data[0], 1, 518400, yuvoutfile);
+        fwrite(frame->data[1], 1, 518400/4, yuvoutfile);
+        fwrite(frame->data[2], 1, 518400/4, yuvoutfile);
+
+        frame->pts = base++;
+        encode(enc_ctx, frame, newpkt, outfile);
+        av_packet_unref(&pkt); //release pkt
+    }
+
+    encode(enc_ctx, NULL, newpkt, outfile);
+
+    __ERROR:
+    if(yuvoutfile){
+        //close file
+        fclose(yuvoutfile);
+    }
+
+    //close device and release ctx
+    if(fmt_ctx) {
+        avformat_close_input(&fmt_ctx);
+    }
+
+    SLOG(NULL, AV_LOG_DEBUG, "finish!\n");
+}

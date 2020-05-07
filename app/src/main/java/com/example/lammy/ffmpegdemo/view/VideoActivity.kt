@@ -10,12 +10,13 @@ import com.blankj.utilcode.util.LogUtils
 import com.example.lammy.ffmpegdemo.R
 import com.example.lammy.ffmpegdemo.util.FFmpegUtil
 import kotlinx.android.synthetic.main.activity_audio.*
+import kotlinx.android.synthetic.main.activity_medio.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 
-class MedioActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
+class VideoActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
     override fun layoutId(): Int {
         return R.layout.activity_medio
     }
@@ -24,7 +25,13 @@ class MedioActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
     }
 
     override fun initData() {
+        btn_h264_encode.setOnClickListener(View.OnClickListener {
+            CoroutineScope(Dispatchers.IO).launch {
+                FFmpegUtil.videoH264Encode()
+            }
+        })
+        btn_h264_decode.setOnClickListener(View.OnClickListener {
 
-
+        })
     }
 }
