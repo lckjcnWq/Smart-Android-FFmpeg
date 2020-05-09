@@ -15,16 +15,33 @@
         >
         <Button
             android:id="@+id/btn_h264_encode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            style="@style/BtnMain"
             android:text="H264视频编码"/>
         <Button
-            android:id="@+id/btn_h264_decode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="H264视频解码"/>
+            android:id="@+id/btn_rtmp_ffmpeg"
+            style="@style/BtnMain"
+            android:text="推送文件RTMP流(ffmpeg)"/>
+        <Button
+            android:id="@+id/btn_rtmp_librmpt"
+            style="@style/BtnMain"
+            android:text="推送文件RTMP流(librmpt)"/>
+        <Button
+            android:id="@+id/btn_ffmpeg_rmpt"
+            style="@style/BtnMain"
+            android:text="開啟攝像頭進行視頻編碼(ffmpeg),輸出到文件/RMPT"/>
+        <Button
+            android:id="@+id/btn_MediaCodec_flv"
+            style="@style/BtnMain"
+            android:text="開啟攝像頭進行視頻編碼(MediaCodec),輸出到文件/FLV"/>
+        <Button
+            android:id="@+id/btn_ffmpeg_rmpt_io"
+            style="@style/BtnMain"
+            android:text="開啟攝像頭進行視頻編碼(ffmpeg),RTMP推流"/>
+        <Button
+            android:id="@+id/btn_merge"
+            style="@style/BtnMain"
+            android:text="音視頻合成,存到flv中"/>
+
     </LinearLayout>
 
 </ScrollView>

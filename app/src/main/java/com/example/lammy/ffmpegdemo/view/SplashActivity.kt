@@ -25,7 +25,7 @@ class SplashActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
     private fun applyPermissions() {
         XXPermissions.with(this)
                 .constantRequest()
-                .permission(Permission.Group.STORAGE)
+                .permission(Permission.READ_EXTERNAL_STORAGE,Permission.WRITE_EXTERNAL_STORAGE,Permission.CAMERA,Permission.RECORD_AUDIO)
                 .request(object : OnPermission {
                     override fun hasPermission(granted: List<String>, all: Boolean) {}
                     override fun noPermission(denied: List<String>, quick: Boolean) {}

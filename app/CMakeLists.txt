@@ -4,6 +4,10 @@ cmake_minimum_required(VERSION 3.4.1)
 add_library( audio_lib
              SHARED
              src/main/cpp/audio_lib.cpp
+             src/main/cpp/common.cpp
+             src/main/cpp/ffmpeg_audio_handle.cpp
+             src/main/cpp/ffmpeg_handle.cpp
+             src/main/cpp/rtmp_handle.cpp
         )
 include_directories(libs/include)
 #设置so的路径
@@ -58,6 +62,13 @@ set_target_properties( swscale-4
                        PROPERTIES IMPORTED_LOCATION
                        ${ffmpeg_DIR}/armeabi-v7a/libswscale-4.so)
 
+add_library( rtmp
+             SHARED
+             IMPORTED)
+set_target_properties( rtmp
+                       PROPERTIES IMPORTED_LOCATION
+                       ${ffmpeg_DIR}/armeabi-v7a/librtmp.so)
+
 
 
 
@@ -74,4 +85,5 @@ target_link_libraries(
                        avutil-55   #工具类
                        swresample-2#音频采样数据格式转换库
                        swscale-4   #视频像素数据格式转换
+                       rtmp
                        ${log-lib} )

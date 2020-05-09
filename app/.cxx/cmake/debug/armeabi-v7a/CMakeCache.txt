@@ -201,8 +201,8 @@ CMAKE_SYSTEM_NAME:UNINITIALIZED=Android
 //No help, variable specified on the command line.
 CMAKE_SYSTEM_VERSION:UNINITIALIZED=19
 
-//The CMake toolchain file
-CMAKE_TOOLCHAIN_FILE:FILEPATH=D:/soft/Android/Sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake
+//No help, variable specified on the command line.
+CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=D:\soft\Android\sdk\ndk\21.1.6352462\build\cmake\android.toolchain.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -217,13 +217,10 @@ Project_BINARY_DIR:STATIC=D:/soft/Project/projectForGit/mvvm_jkplayer/app/.cxx/c
 Project_SOURCE_DIR:STATIC=D:/soft/Project/projectForGit/mvvm_jkplayer/app
 
 //Dependencies for the target
-audio_lib_LIB_DEPENDS:STATIC=general;vedio_lib;general;avfilter-6;general;avformat-57;general;avcodec-57;general;avdevice-57;general;avutil-55;general;swresample-2;general;swscale-4;general;D:/soft/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/19/liblog.so;
+audio_lib_LIB_DEPENDS:STATIC=general;avfilter-6;general;avformat-57;general;avcodec-57;general;avdevice-57;general;avutil-55;general;swresample-2;general;swscale-4;general;rtmp;general;D:/soft/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/19/liblog.so;
 
 //Path to a library.
 log-lib:FILEPATH=D:/soft/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/19/liblog.so
-
-//Dependencies for target
-vedio_lib_LIB_DEPENDS:STATIC=
 
 
 ########################

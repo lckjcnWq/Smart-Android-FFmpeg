@@ -1,1 +1,2 @@
 include ':app',':mvvmlin'
+include ':ffmpeg_lib'

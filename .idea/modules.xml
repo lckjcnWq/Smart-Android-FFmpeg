@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="mvvm_jkplayer/app" />
+      <module fileurl="file://$PROJECT_DIR$/ffmpeg_lib/ffmpeg_lib.iml" filepath="$PROJECT_DIR$/ffmpeg_lib/ffmpeg_lib.iml" group="mvvm_jkplayer/ffmpeg_lib" />
       <module fileurl="file://$PROJECT_DIR$/mvvm_jkplayer.iml" filepath="$PROJECT_DIR$/mvvm_jkplayer.iml" group="mvvm_jkplayer" />
       <module fileurl="file://$PROJECT_DIR$/mvvmlin/mvvmlin.iml" filepath="$PROJECT_DIR$/mvvmlin/mvvmlin.iml" group="mvvm_jkplayer/mvvmlin" />
     </modules>

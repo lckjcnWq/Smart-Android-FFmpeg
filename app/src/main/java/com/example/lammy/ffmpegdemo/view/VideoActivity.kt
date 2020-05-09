@@ -1,5 +1,6 @@
 package com.example.lammy.ffmpegdemo.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.databinding.ViewDataBinding
@@ -30,8 +31,23 @@ class VideoActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
                 FFmpegUtil.videoH264Encode()
             }
         })
-        btn_h264_decode.setOnClickListener(View.OnClickListener {
-
+        btn_rtmp_ffmpeg.setOnClickListener(View.OnClickListener {
+            startActivity(Intent().setClass(this,VideoFileRtmpFFmpegActivity::class.java))
+        })
+        btn_rtmp_librmpt.setOnClickListener(View.OnClickListener {
+            startActivity(Intent().setClass(this,VideoFileRtmpRtmpDumpActivity::class.java))
+        })
+        btn_ffmpeg_rmpt.setOnClickListener(View.OnClickListener {
+            startActivity(Intent().setClass(this,CameraFFmpegPushRtmpActivity::class.java))
+        })
+        btn_MediaCodec_flv.setOnClickListener(View.OnClickListener {
+            startActivity(Intent().setClass(this,CameraMediaCodecFileActivity::class.java))
+        })
+        btn_ffmpeg_rmpt_io.setOnClickListener(View.OnClickListener {
+            startActivity(Intent().setClass(this,CameraMediaCodecRtmpActivity::class.java))
+        })
+        btn_merge.setOnClickListener(View.OnClickListener {
+            startActivity(Intent().setClass(this,AudioRecordFFmpegActivity::class.java))
         })
     }
 }

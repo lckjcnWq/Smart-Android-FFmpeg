@@ -5,6 +5,16 @@ package com.example.lammy.ffmpegdemo.util
  */
 object FFmpegUtil {
 
+    init {
+        System.loadLibrary("audio_lib")
+        System.loadLibrary("avfilter-6")
+        System.loadLibrary("avformat-57")
+        System.loadLibrary("avcodec-57")
+        System.loadLibrary("avdevice-57")
+        System.loadLibrary("avutil-55")
+        System.loadLibrary("swresample-2")
+        System.loadLibrary("swscale-4")
+    }
     //音频相关
     @JvmStatic
     external fun openAudioDevice():Int
@@ -24,16 +34,5 @@ object FFmpegUtil {
     @JvmStatic
     external fun videoH264Encode()
 
-    //视频相关
 
-    init {
-        System.loadLibrary("audio_lib")
-        System.loadLibrary("avfilter-6")
-        System.loadLibrary("avformat-57")
-        System.loadLibrary("avcodec-57")
-        System.loadLibrary("avdevice-57")
-        System.loadLibrary("avutil-55")
-        System.loadLibrary("swresample-2")
-        System.loadLibrary("swscale-4")
-    }
 }

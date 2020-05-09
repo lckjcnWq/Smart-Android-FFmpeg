@@ -1,5 +1,16 @@
 # ninja log v5
-0	601	609676937	CMakeFiles/audio_lib.dir/src/main/cpp/audio_lib.cpp.o	1c32b183942ae891
-6	1007	609677022	CMakeFiles/vedio_lib.dir/src/main/cpp/vedio_lib.cpp.o	b7157bc78f5a08f4
-1007	1221	609677022	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libvedio_lib.so	87c28e182bb40c14
-1221	1456	609677022	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libaudio_lib.so	db53dee57d687e9a
+37	378	610722734	CMakeFiles/audio_lib.dir/src/main/cpp/common.cpp.o	c9457ffb98d4634b
+1	676	610722734	CMakeFiles/audio_lib.dir/src/main/cpp/audio_lib.cpp.o	1c32b183942ae891
+66	921	610722735	CMakeFiles/audio_lib.dir/src/main/cpp/ffmpeg_audio_handle.cpp.o	99166f18357746b7
+111	1033	610722735	CMakeFiles/audio_lib.dir/src/main/cpp/ffmpeg_handle.cpp.o	7f71618f3c4115cc
+0	32	0	clean	41b44b22a4566397
+76	1087	610722950	CMakeFiles/audio_lib.dir/src/main/cpp/common.cpp.o	c9457ffb98d4634b
+4	1394	610722950	CMakeFiles/audio_lib.dir/src/main/cpp/audio_lib.cpp.o	1c32b183942ae891
+140	1619	610722950	CMakeFiles/audio_lib.dir/src/main/cpp/ffmpeg_audio_handle.cpp.o	99166f18357746b7
+206	1723	610722950	CMakeFiles/audio_lib.dir/src/main/cpp/ffmpeg_handle.cpp.o	7f71618f3c4115cc
+2	1050	610723064	CMakeFiles/audio_lib.dir/src/main/cpp/rtmp_handle.cpp.o	ff0d87f63ac640df
+1050	1651	610723065	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libaudio_lib.so	cfb5dc027af4db1f
+7	1274	610728049	CMakeFiles/audio_lib.dir/src/main/cpp/ffmpeg_audio_handle.cpp.o	99166f18357746b7
+300	1333	610728049	CMakeFiles/audio_lib.dir/src/main/cpp/rtmp_handle.cpp.o	ff0d87f63ac640df
+268	1365	610728049	CMakeFiles/audio_lib.dir/src/main/cpp/ffmpeg_handle.cpp.o	7f71618f3c4115cc
+1365	1967	610728050	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libaudio_lib.so	cfb5dc027af4db1f

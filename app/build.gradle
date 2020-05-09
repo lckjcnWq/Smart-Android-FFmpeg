@@ -53,4 +53,5 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1"
     //MVVMLin
     implementation project(path: ':mvvmlin')
+    implementation project(path: ':ffmpeg_lib')
 }

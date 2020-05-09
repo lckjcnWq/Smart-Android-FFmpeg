@@ -1,5 +1,6 @@
 package com.example.lammy.ffmpegdemo.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.databinding.ViewDataBinding
@@ -26,27 +27,23 @@ class AudioActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
 
     override fun initData() {
         btn_get_mp3.setOnClickListener(View.OnClickListener {
-             LogUtils.i("打印路径:"+file.absolutePath)
              CoroutineScope(Dispatchers.IO).launch {
                  FFmpegUtil.getAudioMp3Info(file.absolutePath)
             }
         })
         btn_play_mp3.setOnClickListener(View.OnClickListener {
-             LogUtils.i("打印路径:"+file.absolutePath)
              CoroutineScope(Dispatchers.IO).launch {
                  FFmpegUtil.nativeAudioPlay(file.absolutePath)
             }
         })
-
-        btn_audio_code.setOnClickListener(View.OnClickListener {
-
+        btn_media_change_by_MediaCodec.setOnClickListener(View.OnClickListener {
+            startActivity(Intent().setClass(this,AudioFormatChangeFFmpegActivity::class.java))
         })
-
-        btn_audio_decode.setOnClickListener(View.OnClickListener {
-
+        btn_aac_MediaCodec.setOnClickListener(View.OnClickListener {
+            startActivity(Intent().setClass(this,AudioRecordMediaCodecActivity::class.java))
         })
-        btn_sign.setOnClickListener(View.OnClickListener {
+        btn_aac_MediaCodec.setOnClickListener(View.OnClickListener {
+            startActivity(Intent().setClass(this,AudioRecordFFmpegActivity::class.java))
         })
-
     }
 }

@@ -14,12 +14,6 @@
       "buildCommand": "D:\\soft\\Android\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\soft\\Project\\projectForGit\\mvvm_jkplayer\\app\\.cxx\\cmake\\release\\armeabi-v7a\" audio_lib",
       "abi": "armeabi-v7a",
       "output": "D:\\soft\\Project\\projectForGit\\mvvm_jkplayer\\app\\build\\intermediates\\cmake\\release\\obj\\armeabi-v7a\\libaudio_lib.so"
-    },
-    "vedio_lib-Release-armeabi-v7a": {
-      "artifactName": "vedio_lib",
-      "buildCommand": "D:\\soft\\Android\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\soft\\Project\\projectForGit\\mvvm_jkplayer\\app\\.cxx\\cmake\\release\\armeabi-v7a\" vedio_lib",
-      "abi": "armeabi-v7a",
-      "output": "D:\\soft\\Project\\projectForGit\\mvvm_jkplayer\\app\\build\\intermediates\\cmake\\release\\obj\\armeabi-v7a\\libvedio_lib.so"
     }
   }
 }
