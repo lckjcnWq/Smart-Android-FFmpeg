@@ -52,7 +52,7 @@ int avError(int errNum) {
 extern "C"
 JNIEXPORT jstring JNICALL
 Java_com_example_lammy_ffmpegdemo_ffmpeg_FFmpegHandle_getAvcodecConfiguration(JNIEnv *env,
-                                                                        jobject instance) {
+                                                                              jclass clazz) {
     char info[10000] = {0};
     sprintf(info, "%s\n", avcodec_configuration());
     return env->NewStringUTF(info);
@@ -63,7 +63,7 @@ Java_com_example_lammy_ffmpegdemo_ffmpeg_FFmpegHandle_getAvcodecConfiguration(JN
  */
 extern "C"
 JNIEXPORT jint JNICALL
-Java_com_example_lammy_ffmpegdemo_ffmpeg_FFmpegHandle_setCallback(JNIEnv *env, jobject instance,
+Java_com_example_lammy_ffmpegdemo_ffmpeg_FFmpegHandle_setCallback(JNIEnv *env, jclass clazz,
                                                             jobject pushCallback1) {
     //转换为全局变量
     pushCallback = env->NewGlobalRef(pushCallback1);
@@ -84,7 +84,7 @@ Java_com_example_lammy_ffmpegdemo_ffmpeg_FFmpegHandle_setCallback(JNIEnv *env, j
 
 extern "C"
 JNIEXPORT jint JNICALL
-Java_com_example_lammy_ffmpegdemo_ffmpeg_FFmpegHandle_pushRtmpFile(JNIEnv *env, jobject instance,
+Java_com_example_lammy_ffmpegdemo_ffmpeg_FFmpegHandle_pushRtmpFile(JNIEnv *env, jclass clazz,
                                                              jstring path_) {
     const char *path = env->GetStringUTFChars(path_, 0);
     logw(path);
@@ -323,7 +323,7 @@ int fps = 15;
  */
 extern "C"
 JNIEXPORT jint JNICALL
-Java_com_example_lammy_ffmpegdemo_ffmpeg_FFmpegHandle_initVideo(JNIEnv *env, jobject instance,
+Java_com_example_lammy_ffmpegdemo_ffmpeg_FFmpegHandle_initVideo(JNIEnv *env, jclass clazz,
                                                           jstring url_,jint jwidth,jint jheight) {
     const char *out_path = env->GetStringUTFChars(url_, 0);
     logd(out_path);
@@ -427,7 +427,7 @@ Java_com_example_lammy_ffmpegdemo_ffmpeg_FFmpegHandle_initVideo(JNIEnv *env, job
 int64_t startTime = 0;
 extern "C"
 JNIEXPORT jint JNICALL
-Java_com_example_lammy_ffmpegdemo_ffmpeg_FFmpegHandle_onFrameCallback(JNIEnv *env, jobject instance,
+Java_com_example_lammy_ffmpegdemo_ffmpeg_FFmpegHandle_onFrameCallback(JNIEnv *env, jclass clazz,
                                                                 jbyteArray buffer_) {
 //    startTime = av_gettime();
     jbyte *in = env->GetByteArrayElements(buffer_, NULL);
@@ -510,7 +510,7 @@ Java_com_example_lammy_ffmpegdemo_ffmpeg_FFmpegHandle_onFrameCallback(JNIEnv *en
  */
 extern "C"
 JNIEXPORT jint JNICALL
-Java_com_example_lammy_ffmpegdemo_ffmpeg_FFmpegHandle_close(JNIEnv *env, jobject instance) {
+Java_com_example_lammy_ffmpegdemo_ffmpeg_FFmpegHandle_close(JNIEnv *env, jclass clazz) {
     if (video_st)
         avcodec_close(video_st->codec);
     if (ofmt_ctx) {
@@ -528,7 +528,7 @@ Java_com_example_lammy_ffmpegdemo_ffmpeg_FFmpegHandle_close(JNIEnv *env, jobject
  */
 extern "C"
 JNIEXPORT jint JNICALL
-Java_com_example_lammy_ffmpegdemo_ffmpeg_FFmpegHandle_initVideo2(JNIEnv *env, jobject instance,
+Java_com_example_lammy_ffmpegdemo_ffmpeg_FFmpegHandle_initVideo2(JNIEnv *env, jclass clazz,
                                                            jstring url_) {
     const char *out_path = env->GetStringUTFChars(url_, 0);
     logd(out_path);
@@ -627,7 +627,7 @@ Java_com_example_lammy_ffmpegdemo_ffmpeg_FFmpegHandle_initVideo2(JNIEnv *env, jo
 
 extern "C"
 JNIEXPORT jint JNICALL
-Java_com_example_lammy_ffmpegdemo_ffmpeg_FFmpegHandle_sendH264(JNIEnv *env, jobject instance,
+Java_com_example_lammy_ffmpegdemo_ffmpeg_FFmpegHandle_sendH264(JNIEnv *env, jclass clazz,
                                                          jbyteArray buffer_, jint len) {
     int ret = 0;
     int dataLen = len;

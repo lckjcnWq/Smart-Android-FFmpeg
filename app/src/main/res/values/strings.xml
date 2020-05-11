@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">FFmpegdemo</string>
+    <string name="app_name">AVideoFFmpeg</string>
     <string name="activity_audio_record_ffmpeg_info"></string>
 </resources>

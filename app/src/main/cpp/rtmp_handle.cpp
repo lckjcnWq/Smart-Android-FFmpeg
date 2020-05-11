@@ -253,7 +253,7 @@ int main(int argc, char *argv[]) {
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_com_example_lammy_ffmpegdemo_rtmp_RtmpHandle_pushFile(JNIEnv *env, jobject instance, jstring path_) {
+Java_com_example_lammy_ffmpegdemo_rtmp_RtmpHandle_pushFile(JNIEnv *env, jclass clazz, jstring path_) {
     const char *path = env->GetStringUTFChars(path_, 0);
     logw(path);
     // TODO
@@ -278,7 +278,7 @@ RTMPPacket *packet = NULL;
  */
 extern "C"
 JNIEXPORT jint JNICALL
-Java_com_example_lammy_ffmpegdemo_rtmp_RtmpHandle_connect(JNIEnv *env, jobject instance, jstring url_) {
+Java_com_example_lammy_ffmpegdemo_rtmp_RtmpHandle_connect(JNIEnv *env, jclass clazz, jstring url_) {
     const char *url = env->GetStringUTFChars(url_, 0);
     int len = strlen(url);
 
@@ -339,7 +339,7 @@ Java_com_example_lammy_ffmpegdemo_rtmp_RtmpHandle_connect(JNIEnv *env, jobject i
  */
 extern "C"
 JNIEXPORT jint JNICALL
-Java_com_example_lammy_ffmpegdemo_rtmp_RtmpHandle_push(JNIEnv *env, jobject instance, jbyteArray buf_,
+Java_com_example_lammy_ffmpegdemo_rtmp_RtmpHandle_push(JNIEnv *env, jclass clazz, jbyteArray buf_,
                                                  jint length) {
     jbyte *buf = env->GetByteArrayElements(buf_, NULL);
     // TODO
@@ -400,7 +400,7 @@ Java_com_example_lammy_ffmpegdemo_rtmp_RtmpHandle_push(JNIEnv *env, jobject inst
  */
 extern "C"
 JNIEXPORT jint JNICALL
-Java_com_example_lammy_ffmpegdemo_rtmp_RtmpHandle_close(JNIEnv *env, jobject instance) {
+Java_com_example_lammy_ffmpegdemo_rtmp_RtmpHandle_close(JNIEnv *env, jclass clazz) {
     // TODO
     if (rtmp != NULL) {
         RTMP_Close(rtmp);

@@ -1,47 +1,48 @@
 package com.example.lammy.ffmpegdemo.view
 
-import android.app.Activity
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
+import androidx.databinding.ViewDataBinding
+import com.aleyn.mvvm.base.BaseActivity
+import com.aleyn.mvvm.base.NoViewModel
 import com.example.ffmpeg_lib.audio.AudioCodec
-import com.example.ffmpeg_lib.utils.FileUtil
 import com.example.lammy.ffmpegdemo.R
+import kotlinx.android.synthetic.main.activity_audio_codec.*
 import java.text.DecimalFormat
 import java.text.NumberFormat
 
 /**
  * Modified :
  */
-class AudioFormatChangeFFmpegActivity : Activity() {
-    private var tvInfo: TextView? = null
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_audio_codec)
-        initView()
+class AudioFormatChangeFFmpegActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
+
+    override fun layoutId(): Int {
+        return R.layout.activity_audio_codec
     }
 
-    private fun initView() {
-        tvInfo = findViewById(R.id.tv_info)
+    override fun initView(savedInstanceState: Bundle?) {
     }
 
-    fun btnStart(view: View?) {
-        startRecord()
+    override fun initData() {
+        btn_start.setOnClickListener(View.OnClickListener {
+            startRecord()
+        })
     }
 
     private fun startRecord() {
         val audioCodec: AudioCodec = AudioCodec.newInstance()
-        audioCodec.setIOPath(FileUtil.getMainDir().absolutePath.toString() + "/dongfengpo.mp3", FileUtil.getMainDir().absolutePath.toString() + "/dongfengpo.aac")
+        audioCodec.setIOPath("/sdcard/input_test.mp3", "/sdcard/aaa.aac")
         audioCodec.prepare()
         audioCodec.startAsync()
         audioCodec.setOnCompleteListener(AudioCodec.OnCompleteListener {
             audioCodec.release()
-            runOnUiThread { tvInfo!!.text = "100%" }
+            runOnUiThread { tv_info.text = "100%" }
         })
         val df = NumberFormat.getInstance() as DecimalFormat
         df.applyPattern("##.##%")
         audioCodec.setOnProgressListener(AudioCodec.OnProgressListener { current, total ->
-            runOnUiThread { tvInfo!!.text = current.toString() + "/" + total + "  " + df.format(current.toDouble() / total) }
+            runOnUiThread { tv_info.text = current.toString() + "/" + total + "  " + df.format(current.toDouble() / total) }
         })
     }
+
 }

@@ -6,6 +6,7 @@ package com.example.lammy.ffmpegdemo.rtmp
  */
 object RtmpHandle  {
     init {
+        System.loadLibrary("audio_lib")
         System.loadLibrary("rtmp")
     }
 

@@ -26,7 +26,7 @@ using namespace std;
  */
 extern "C"
 JNIEXPORT jint JNICALL
-Java_com_example_lammy_ffmpegdemo_audio_FFmpegAudioHandle_encodePcmFile(JNIEnv *env, jobject instance,
+Java_com_example_lammy_ffmpegdemo_audio_FFmpegAudioHandle_encodePcmFile(JNIEnv *env, jclass clazz,
                                                                   jstring souPath_,
                                                                   jstring tarPath_) {
     av_log_set_callback(log_callback_null);
@@ -65,8 +65,8 @@ Java_com_example_lammy_ffmpegdemo_audio_FFmpegAudioHandle_encodePcmFile(JNIEnv *
         av_log(NULL, AV_LOG_ERROR, "%s", "输出文件打开失败！\n");
         return -1;
     }
-    pCodec = avcodec_find_encoder_by_name("libfdk_aac");
-//  pCodec = avcodec_find_encoder(AV_CODEC_ID_AAC);
+//    pCodec = avcodec_find_encoder_by_name("libfdk_aac");
+  pCodec = avcodec_find_encoder(AV_CODEC_ID_AAC);
     if (!pCodec) {
         av_log(NULL, AV_LOG_ERROR, "%s", "没有找到合适的编码器！");
         return -1;
@@ -230,7 +230,7 @@ int apts = 0;
  */
 extern "C"
 JNIEXPORT jint JNICALL
-Java_com_example_lammy_ffmpegdemo_audio_FFmpegAudioHandle_initAudio(JNIEnv *env, jobject instance,
+Java_com_example_lammy_ffmpegdemo_audio_FFmpegAudioHandle_initAudio(JNIEnv *env, jclass clazz,
                                                               jstring url_) {
     av_log_set_callback(log_callback_null);
     const char *url = env->GetStringUTFChars(url_, 0);
@@ -254,8 +254,8 @@ Java_com_example_lammy_ffmpegdemo_audio_FFmpegAudioHandle_initAudio(JNIEnv *env,
         return -1;
     }
     //寻找编码器
-    audio_codec = avcodec_find_encoder_by_name("libfdk_aac");
-//    audio_codec = avcodec_find_encoder(AV_CODEC_ID_AAC);
+//  audio_codec = avcodec_find_encoder_by_name("libfdk_aac");
+    audio_codec = avcodec_find_encoder(AV_CODEC_ID_AAC);
     if (!audio_codec) {
         av_log(NULL, AV_LOG_ERROR, "%s", "没有找到合适的编码器！");
         return -1;
@@ -275,7 +275,7 @@ Java_com_example_lammy_ffmpegdemo_audio_FFmpegAudioHandle_initAudio(JNIEnv *env,
     audio_codec_ctx->channel_layout = AV_CH_LAYOUT_STEREO;
     audio_codec_ctx->channels = av_get_channel_layout_nb_channels(audio_codec_ctx->channel_layout);
     audio_codec_ctx->bit_rate = 64000;
-//    audio_codec_ctx->frame_size = 1024;
+//  audio_codec_ctx->frame_size = 1024;
 
     //输出格式信息
     av_dump_format(audio_ofmc, 0, url, 1);
@@ -355,7 +355,7 @@ int64_t currentTime = 0;
 int countEncode = 0;
 extern "C"
 JNIEXPORT jint JNICALL
-Java_com_example_lammy_ffmpegdemo_audio_FFmpegAudioHandle_encodeAudio(JNIEnv *env, jobject instance,
+Java_com_example_lammy_ffmpegdemo_audio_FFmpegAudioHandle_encodeAudio(JNIEnv *env, jclass clazz,
                                                                 jbyteArray buffer_) {
     //记录编码次数
     countEncode++;
@@ -413,7 +413,7 @@ Java_com_example_lammy_ffmpegdemo_audio_FFmpegAudioHandle_encodeAudio(JNIEnv *en
  */
 extern "C"
 JNIEXPORT jint JNICALL
-Java_com_example_lammy_ffmpegdemo_audio_FFmpegAudioHandle_close(JNIEnv *env, jobject instance) {
+Java_com_example_lammy_ffmpegdemo_audio_FFmpegAudioHandle_close(JNIEnv *env, jclass clazz) {
     if (audio_st)
         avcodec_close(audio_st->codec);
     if (audio_ofmc) {

@@ -45,7 +45,7 @@ public class ADTSUtils {
         int chanCfg = 2; // CPE
 
 
-// fill in ADTS data
+    // fill in ADTS data
         packet[0] = (byte) 0xFF;
         packet[1] = (byte) 0xF9;
         packet[2] = (byte) (((profile - 1) << 6) + (freqIdx << 2) + (chanCfg >> 2));

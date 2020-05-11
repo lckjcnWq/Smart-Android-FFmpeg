@@ -14,25 +14,25 @@
         android:orientation="vertical"
         >
         <Button
-            android:id="@+id/btn_get_mp3"
+            android:id="@+id/btn_audio_info"
             style="@style/BtnMain"
-            android:text="获取音频信息mp3"/>
+            android:text="获取音频信息"/>
         <Button
-            android:id="@+id/btn_play_mp3"
+            android:id="@+id/btn_resampling"
             style="@style/BtnMain"
-            android:text="使用audioTrack播放一个mp3"/>
+            android:text="音频信息重采样"/>
         <Button
-            android:id="@+id/btn_media_change_by_MediaCodec"
+            android:id="@+id/btn_audio_change_by_MediaCodec"
             style="@style/BtnMain"
-            android:text="音頻格式轉換(MediaCodec)"/>
+            android:text="音频格式转换(MediaCodec)"/>
         <Button
             android:id="@+id/btn_aac_MediaCodec"
             style="@style/BtnMain"
-            android:text="錄製AAC編碼(MediaCodec)"/>
+            android:text="录制AAC编码(MediaCodec)"/>
         <Button
             android:id="@+id/btn_aac_ffmpeg"
             style="@style/BtnMain"
-            android:text="錄製AAC編碼(ffmpeg)"/>
+            android:text="录制AAC编码(FFmpeg)"/>
 
     </LinearLayout>
 

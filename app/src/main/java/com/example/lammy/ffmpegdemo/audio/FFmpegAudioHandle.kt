@@ -6,6 +6,7 @@ package com.example.lammy.ffmpegdemo.audio
  */
 object FFmpegAudioHandle  {
     init {
+        System.loadLibrary("audio_lib")
         System.loadLibrary("avfilter-6")
         System.loadLibrary("avformat-57")
         System.loadLibrary("avcodec-57")

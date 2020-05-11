@@ -34,15 +34,11 @@ class SplashActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
 
     override fun initData() {
         btn_audio_about.setOnClickListener(View.OnClickListener {
-            val inte=Intent()
-            inte.setClass(this,AudioActivity::class.java)
-            startActivity(inte)
+            startActivity(Intent().setClass(this,AudioActivity::class.java))
         })
 
         btn_medio_about.setOnClickListener(View.OnClickListener {
-            val inte=Intent()
-            inte.setClass(this,VideoActivity::class.java)
-            startActivity(inte)
+            startActivity(Intent().setClass(this,VideoActivity::class.java))
         })
     }
 }

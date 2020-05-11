@@ -1,12 +1,14 @@
 package com.example.lammy.ffmpegdemo.view
 
-import android.app.Activity
 import android.media.AudioFormat
 import android.media.AudioRecord
 import android.media.MediaRecorder
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import androidx.databinding.ViewDataBinding
+import com.aleyn.mvvm.base.BaseActivity
+import com.aleyn.mvvm.base.NoViewModel
 import com.example.ffmpeg_lib.audio.AudioBuffer
 import com.example.ffmpeg_lib.utils.ADTSUtils
 import com.example.ffmpeg_lib.utils.FileUtil
@@ -14,14 +16,14 @@ import com.example.ffmpeg_lib.utils.IOUtils
 import com.example.ffmpeg_lib.utils.LogUtils
 import com.example.lammy.ffmpegdemo.R
 import com.example.lammy.ffmpegdemo.audio.FFmpegAudioHandle
+import kotlinx.android.synthetic.main.activity_audio_record_ffmpeg.*
 import java.io.*
 
 /**
  * Desc :  如果需要把采集的原始数据输出到pcm文件，把out相关的注释打开即可
  * Modified :
  */
-class AudioRecordFFmpegActivity : Activity() {
-    private val tvInfo: TextView? = null
+class AudioRecordFFmpegActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
     private var mAudioRecord: AudioRecord? = null
     private var mAudioSampleRate = 0
     private var mAudioChanelCount = 0
@@ -36,13 +38,30 @@ class AudioRecordFFmpegActivity : Activity() {
     //采集数据并输入到pcm文件。
     private val out: OutputStream? = null
     private var audioBuffer: AudioBuffer? = null
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_audio_record_ffmpeg)
+    override fun layoutId(): Int {
+        return R.layout.activity_audio_record_ffmpeg
+    }
+
+    override fun initView(savedInstanceState: Bundle?) {
+        btn_start.setOnClickListener(View.OnClickListener {
+            btnStart(it)
+        })
+        btn_stop.setOnClickListener(View.OnClickListener {
+            btnStop(it)
+        })
+        btn_EncodePcmFile.setOnClickListener(View.OnClickListener {
+            btnEncodePcmFile(it)
+        })
+        btn_test.setOnClickListener(View.OnClickListener {
+            btnTest(it)
+        })
+    }
+
+    override fun initData() {
     }
 
     fun btnStart(view: View?) {
-        ret = FFmpegAudioHandle.initAudio(FileUtil.getMainDir().toString() + "/record_ffmpeg.aac")
+        ret = FFmpegAudioHandle.initAudio("/sdcard/aaa.aac")
         if (ret < 0) {
             LogUtils.e("initAudio error $ret")
             return
@@ -79,7 +98,6 @@ class AudioRecordFFmpegActivity : Activity() {
     fun btnTest(view: View?) {
         val pcmFileName = "tdjm.pcm"
         val filePcm = File(FileUtil.getMainDir(), pcmFileName)
-        //        final File filePcm = new File(FileUtil.getMainDir(), "AudioRecordFFmpegActivity.pcm");
         if (!filePcm.exists()) {
             LogUtils.d("$filePcm is not exist")
             return
@@ -153,7 +171,6 @@ class AudioRecordFFmpegActivity : Activity() {
                 val audio = ByteArray(size)
                 System.arraycopy(mAudioBuffer, 0, audio, 0, size)
                 LogUtils.v("采集到数据:" + audio.size)
-                //                IOUtils.write(out, audio, 0, audio.length);
                 audioBuffer?.put(audio, 0, audio.size)
             }
         }
@@ -168,7 +185,7 @@ class AudioRecordFFmpegActivity : Activity() {
     }
 
     private fun encodePCM() {
-        val chunkPCM: ByteArray = audioBuffer?.getFrameBuf() ?: return //获取解码器所在线程输出的数据 代码后边会贴上
+        val chunkPCM: ByteArray = audioBuffer?.getFrameBuf() ?: return //获取解码器所在线程输出的数据
         FFmpegAudioHandle.encodeAudio(chunkPCM)
     }
 
@@ -181,6 +198,6 @@ class AudioRecordFFmpegActivity : Activity() {
             mAudioRecord!!.release()
         }
         LogUtils.w("release")
-        //        IOUtils.close(out);
     }
+
 }

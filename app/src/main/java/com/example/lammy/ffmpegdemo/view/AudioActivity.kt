@@ -18,6 +18,7 @@ import java.io.File
 
 class AudioActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
     val file=FileUtils.getFileByPath("/sdcard/test.mp3")
+
     override fun layoutId(): Int {
         return R.layout.activity_audio
     }
@@ -26,23 +27,23 @@ class AudioActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
     }
 
     override fun initData() {
-        btn_get_mp3.setOnClickListener(View.OnClickListener {
+        btn_audio_info.setOnClickListener(View.OnClickListener {
              CoroutineScope(Dispatchers.IO).launch {
                  FFmpegUtil.getAudioMp3Info(file.absolutePath)
             }
         })
-        btn_play_mp3.setOnClickListener(View.OnClickListener {
+        btn_resampling.setOnClickListener(View.OnClickListener {
              CoroutineScope(Dispatchers.IO).launch {
                  FFmpegUtil.nativeAudioPlay(file.absolutePath)
             }
         })
-        btn_media_change_by_MediaCodec.setOnClickListener(View.OnClickListener {
+        btn_audio_change_by_MediaCodec.setOnClickListener(View.OnClickListener {
             startActivity(Intent().setClass(this,AudioFormatChangeFFmpegActivity::class.java))
         })
         btn_aac_MediaCodec.setOnClickListener(View.OnClickListener {
             startActivity(Intent().setClass(this,AudioRecordMediaCodecActivity::class.java))
         })
-        btn_aac_MediaCodec.setOnClickListener(View.OnClickListener {
+        btn_aac_ffmpeg.setOnClickListener(View.OnClickListener {
             startActivity(Intent().setClass(this,AudioRecordFFmpegActivity::class.java))
         })
     }

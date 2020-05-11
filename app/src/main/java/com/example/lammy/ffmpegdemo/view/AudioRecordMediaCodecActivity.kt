@@ -1,13 +1,16 @@
 package com.example.lammy.ffmpegdemo.view
 
-import android.app.Activity
 import android.media.*
 import android.os.Bundle
 import android.view.View
+import androidx.databinding.ViewDataBinding
+import com.aleyn.mvvm.base.BaseActivity
+import com.aleyn.mvvm.base.NoViewModel
 import com.example.ffmpeg_lib.utils.ADTSUtils
 import com.example.ffmpeg_lib.utils.FileUtil
 import com.example.ffmpeg_lib.utils.LogUtils
 import com.example.lammy.ffmpegdemo.R
+import kotlinx.android.synthetic.main.activity_audio_record.*
 import java.io.*
 import java.nio.ByteBuffer
 import java.util.*
@@ -17,7 +20,7 @@ import java.util.concurrent.ArrayBlockingQueue
  * Desc :
  * Modified :
  */
-class AudioRecordMediaCodecActivity : Activity() {
+class AudioRecordMediaCodecActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
     private var mAudioRecord: AudioRecord? = null
     private var mAudioSampleRate = 0
     private var mAudioChanelCount = 0
@@ -34,9 +37,22 @@ class AudioRecordMediaCodecActivity : Activity() {
     private var queue: ArrayBlockingQueue<ByteArray>? = null
     private var isRecord = false
     private val MAX_BUFFER_SIZE = 8192
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_audio_record)
+
+    override fun layoutId(): Int {
+        return R.layout.activity_audio_record
+    }
+
+    override fun initView(savedInstanceState: Bundle?) {
+    }
+
+    override fun initData() {
+        btn_record_start.setOnClickListener(View.OnClickListener {
+            btnStart(it)
+        })
+
+        btn_record_end.setOnClickListener(View.OnClickListener {
+            btnStop(it)
+        })
     }
 
     fun btnStart(view: View?) {
@@ -71,7 +87,6 @@ class AudioRecordMediaCodecActivity : Activity() {
 
     fun btnStop(view: View?) {
         isRecord = false
-        //        release();
     }
 
     private fun fetchAudioRunnable(): Runnable {
@@ -257,4 +272,5 @@ class AudioRecordMediaCodecActivity : Activity() {
         }
         LogUtils.w("release")
     }
+
 }

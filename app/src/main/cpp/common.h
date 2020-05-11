@@ -1,7 +1,3 @@
-//
-// Created by eric on 2018/1/22.
-//
-
 #ifndef FFMPEGDEMO_COMMON_H
 #define FFMPEGDEMO_COMMON_H
 
