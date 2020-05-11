@@ -6,10 +6,6 @@ import android.view.SurfaceHolder
 import android.view.SurfaceView
 
 /**
- * Author : eric
- * CreateDate : 2017/10/9  16:36
- * Email : ericli_wang@163.com
- * Version : 2.0
  * Desc :
  * Modified :
  */
