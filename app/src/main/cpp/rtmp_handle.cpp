@@ -256,7 +256,6 @@ JNIEXPORT void JNICALL
 Java_com_example_lammy_ffmpegdemo_rtmp_RtmpHandle_pushFile(JNIEnv *env, jclass clazz, jstring path_) {
     const char *path = env->GetStringUTFChars(path_, 0);
     logw(path);
-    // TODO
     publish_using_packet(path);
     env->ReleaseStringUTFChars(path_, path);
 }

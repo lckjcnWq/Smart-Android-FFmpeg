@@ -28,7 +28,7 @@ class VideoActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
     override fun initData() {
         btn_h264_encode.setOnClickListener(View.OnClickListener {
             CoroutineScope(Dispatchers.IO).launch {
-                FFmpegUtil.videoH264Encode()   //使用ios平台NV12Z转YUV420P
+                FFmpegUtil.videoH264Encode()   //适用于ios平台NV12转YUV420P
             }
         })
         btn_rtmp_ffmpeg.setOnClickListener(View.OnClickListener {

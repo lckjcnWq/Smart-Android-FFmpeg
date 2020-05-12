@@ -17,10 +17,6 @@ import com.example.lammy.ffmpegdemo.widget.UiSurfaceView
 import java.util.concurrent.Executors
 
 /**
- * Author : eric
- * CreateDate : 2017/11/6  10:57
- * Email : ericli_wang@163.com
- * Version : 2.0
  * Desc :
  * Modified :
  */

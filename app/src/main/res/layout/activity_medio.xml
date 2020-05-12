@@ -28,19 +28,19 @@
         <Button
             android:id="@+id/btn_ffmpeg_rmpt"
             style="@style/BtnMain"
-            android:text="開啟攝像頭進行視頻編碼(ffmpeg),輸出到文件/RMPT"/>
+            android:text="开启摄像头进行视频编码(ffmpeg),输出到文件/RMPT"/>
         <Button
             android:id="@+id/btn_MediaCodec_flv"
             style="@style/BtnMain"
-            android:text="開啟攝像頭進行視頻編碼(MediaCodec),輸出到文件/FLV"/>
+            android:text="开启摄像头进行视频编码(MediaCodec),输出到文件/FLV"/>
         <Button
             android:id="@+id/btn_ffmpeg_rmpt_io"
             style="@style/BtnMain"
-            android:text="開啟攝像頭進行視頻編碼(ffmpeg),RTMP推流"/>
+            android:text="开启摄像头进行视频编码(ffmpeg),RTMP推流"/>
         <Button
             android:id="@+id/btn_merge"
             style="@style/BtnMain"
-            android:text="音視頻合成,存到flv中"/>
+            android:text="音视频合成,存到flv中"/>
 
     </LinearLayout>
 

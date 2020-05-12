@@ -1,39 +1,40 @@
 package com.example.lammy.ffmpegdemo.view
 
-import android.app.Activity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import androidx.databinding.ViewDataBinding
+import com.aleyn.mvvm.base.BaseActivity
+import com.aleyn.mvvm.base.NoViewModel
 import com.example.ffmpeg_lib.ffmpeg.PushCallback
 import com.example.ffmpeg_lib.utils.LogUtils
 import com.example.lammy.ffmpegdemo.R
 import com.example.lammy.ffmpegdemo.ffmpeg.FFmpegHandle
+import kotlinx.android.synthetic.main.activity_push_file_rtmp.*
 import java.io.File
 
 /**
  * Modified :
  */
-class VideoFileRtmpFFmpegActivity : Activity() {
-    private var tvPushInfo: TextView? = null
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_push_file_rtmp)
-        initView()
-        initData()
+class VideoFileRtmpFFmpegActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
+    override fun layoutId(): Int {
+        return R.layout.activity_push_file_rtmp
     }
 
-    private fun initView() {
-        tvPushInfo = findViewById(R.id.tv_push_info)
+    override fun initView(savedInstanceState: Bundle?) {
+        btn_push.setOnClickListener(View.OnClickListener {
+            btnPush(it)
+        })
     }
 
-    private fun initData() {
+    override fun initData() {
         val res: Int = FFmpegHandle.setCallback(PushCallback { pts, dts, duration, index ->
             val sb = StringBuilder()
             sb.append("pts: ").append(pts).append("\n")
             sb.append("dts: ").append(dts).append("\n")
             sb.append("duration: ").append(duration).append("\n")
             sb.append("index: ").append(index).append("\n")
-            tvPushInfo!!.text = sb.toString()
+            tv_push_info.text = sb.toString()
         }
 
         )
@@ -41,15 +42,13 @@ class VideoFileRtmpFFmpegActivity : Activity() {
     }
 
     fun btnPush(view: View?) {
-        val path = "/sdcard/input_test.flv"
-        val file = File(path)
-        LogUtils.d(path + "  " + file.exists())
         object : Thread() {
             override fun run() {
                 super.run()
-                val result: Int = FFmpegHandle.pushRtmpFile(path)
+                val result: Int = FFmpegHandle.pushRtmpFile("/sdcard/input_test.flv")
                 LogUtils.d("result $result")
             }
         }.start()
     }
+
 }

@@ -22,7 +22,7 @@ public class VideoComponent {
     private int width;
     private int height;
     private int mFrameRate = 15;
-    private static final String VCODEC_MIME = "video/avc";
+    private static final String VCODEC_MIME = "video/avc";  //H264编码
     private MediaCodec mMediaCodec;
     private EncodedDataCallback mEncodedDataCallback;
     private boolean isCodecStart=false;

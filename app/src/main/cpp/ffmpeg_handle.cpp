@@ -123,7 +123,7 @@ Java_com_example_lammy_ffmpegdemo_ffmpeg_FFmpegHandle_pushRtmpFile(JNIEnv *env, 
             avError(ret);
             throw ret;
         }
-        //打印视频视频信息
+        //打印音频视频信息
         //0打印所有  inUrl 打印时候显示，
         av_dump_format(ictx, 0, inUrl, 0);
 
@@ -405,7 +405,7 @@ Java_com_example_lammy_ffmpegdemo_ffmpeg_FFmpegHandle_initVideo(JNIEnv *env, jcl
     }
     video_st->time_base.num = 1;
     video_st->time_base.den = fps;
-//    video_st->codec = pCodecCtx;
+//  video_st->codec = pCodecCtx;
     video_st->codecpar->codec_tag = 0;
     avcodec_parameters_from_context(video_st->codecpar, pCodecCtx);
 
