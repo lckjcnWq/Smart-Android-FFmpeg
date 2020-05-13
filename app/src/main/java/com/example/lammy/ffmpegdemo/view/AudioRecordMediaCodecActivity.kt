@@ -17,7 +17,7 @@ import java.util.*
 import java.util.concurrent.ArrayBlockingQueue
 
 /**
- * Desc :
+ * Desc :录制AAC编码(MedioCodec)
  * Modified :
  */
 class AudioRecordMediaCodecActivity : BaseActivity<NoViewModel, ViewDataBinding>() {

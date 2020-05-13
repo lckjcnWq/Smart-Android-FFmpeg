@@ -1,2 +1,61 @@
 ninja: Entering directory `D:\soft\Project\projectForGit\mvvm_jkplayer\app\.cxx\cmake\debug\armeabi-v7a'
-ninja: no work to do.
+[1/2] Building CXX object CMakeFiles/audio_lib.dir/src/main/cpp/ffmpeg_audio_handle.cpp.o
+../../../../src/main/cpp/ffmpeg_audio_handle.cpp:79:27: warning: 'codec' is deprecated [-Wdeprecated-declarations]
+    pCodecCtx = audio_st->codec;
+                          ^
+../../../../libs/include\libavformat/avformat.h:879:5: note: 'codec' has been explicitly marked deprecated here
+    attribute_deprecated
+    ^
+../../../../libs/include\libavutil/attributes.h:94:49: note: expanded from macro 'attribute_deprecated'
+#    define attribute_deprecated __attribute__((deprecated))
+                                                ^
+../../../../src/main/cpp/ffmpeg_audio_handle.cpp:129:37: warning: 'codec' is deprecated [-Wdeprecated-declarations]
+    audio_st->time_base = audio_st->codec->time_base;
+                                    ^
+../../../../libs/include\libavformat/avformat.h:879:5: note: 'codec' has been explicitly marked deprecated here
+    attribute_deprecated
+    ^
+../../../../libs/include\libavutil/attributes.h:94:49: note: expanded from macro 'attribute_deprecated'
+#    define attribute_deprecated __attribute__((deprecated))
+                                                ^
+../../../../src/main/cpp/ffmpeg_audio_handle.cpp:134:5: warning: ignoring return value of function declared with 'warn_unused_result' attribute [-Wunused-result]
+    avformat_write_header(pFormatCtx, NULL);
+    ^~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~
+../../../../src/main/cpp/ffmpeg_audio_handle.cpp:192:29: warning: 'codec' is deprecated [-Wdeprecated-declarations]
+    avcodec_close(audio_st->codec);
+                            ^
+../../../../libs/include\libavformat/avformat.h:879:5: note: 'codec' has been explicitly marked deprecated here
+    attribute_deprecated
+    ^
+../../../../libs/include\libavutil/attributes.h:94:49: note: expanded from macro 'attribute_deprecated'
+#    define attribute_deprecated __attribute__((deprecated))
+                                                ^
+../../../../src/main/cpp/ffmpeg_audio_handle.cpp:270:33: warning: 'codec' is deprecated [-Wdeprecated-declarations]
+    audio_codec_ctx = audio_st->codec;
+                                ^
+../../../../libs/include\libavformat/avformat.h:879:5: note: 'codec' has been explicitly marked deprecated here
+    attribute_deprecated
+    ^
+../../../../libs/include\libavutil/attributes.h:94:49: note: expanded from macro 'attribute_deprecated'
+#    define attribute_deprecated __attribute__((deprecated))
+                                                ^
+../../../../src/main/cpp/ffmpeg_audio_handle.cpp:335:37: warning: 'codec' is deprecated [-Wdeprecated-declarations]
+    audio_st->time_base = audio_st->codec->time_base;
+                                    ^
+../../../../libs/include\libavformat/avformat.h:879:5: note: 'codec' has been explicitly marked deprecated here
+    attribute_deprecated
+    ^
+../../../../libs/include\libavutil/attributes.h:94:49: note: expanded from macro 'attribute_deprecated'
+#    define attribute_deprecated __attribute__((deprecated))
+                                                ^
+../../../../src/main/cpp/ffmpeg_audio_handle.cpp:418:33: warning: 'codec' is deprecated [-Wdeprecated-declarations]
+        avcodec_close(audio_st->codec);
+                                ^
+../../../../libs/include\libavformat/avformat.h:879:5: note: 'codec' has been explicitly marked deprecated here
+    attribute_deprecated
+    ^
+../../../../libs/include\libavutil/attributes.h:94:49: note: expanded from macro 'attribute_deprecated'
+#    define attribute_deprecated __attribute__((deprecated))
+                                                ^
+7 warnings generated.
+[2/2] Linking CXX shared library ..\..\..\..\build\intermediates\cmake\debug\obj\armeabi-v7a\libaudio_lib.so

@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.activity_push_file_rtmp.*
 import java.io.File
 
 /**
- * Modified :
+ * Modified :推送文件RTMP流(ffmpeg)
  */
 class VideoFileRtmpFFmpegActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
     override fun layoutId(): Int {

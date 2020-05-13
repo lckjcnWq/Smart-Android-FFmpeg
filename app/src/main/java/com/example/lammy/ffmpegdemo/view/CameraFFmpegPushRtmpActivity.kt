@@ -17,7 +17,7 @@ import com.example.lammy.ffmpegdemo.widget.UiSurfaceView
 import java.util.concurrent.Executors
 
 /**
- * Desc :
+ * Desc : 将摄像头采集的数据data由H264编码成yuv格式然后进行推送
  * Modified :
  */
 class CameraFFmpegPushRtmpActivity : Activity(), SurfaceHolder.Callback {

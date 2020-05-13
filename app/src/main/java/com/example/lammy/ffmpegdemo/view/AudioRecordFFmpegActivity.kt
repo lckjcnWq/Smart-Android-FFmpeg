@@ -21,6 +21,7 @@ import java.io.*
 
 /**
  * Desc :  如果需要把采集的原始数据输出到pcm文件，把out相关的注释打开即可
+ * 录制AAC编码(ffmpeg)
  * Modified :
  */
 class AudioRecordFFmpegActivity : BaseActivity<NoViewModel, ViewDataBinding>() {

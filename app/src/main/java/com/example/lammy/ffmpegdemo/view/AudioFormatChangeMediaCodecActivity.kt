@@ -12,9 +12,9 @@ import java.text.DecimalFormat
 import java.text.NumberFormat
 
 /**
- * Modified :
+ * Modified :音视频格式转换
  */
-class AudioFormatChangeFFmpegActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
+class AudioFormatChangeMediaCodecActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
 
     override fun layoutId(): Int {
         return R.layout.activity_audio_codec

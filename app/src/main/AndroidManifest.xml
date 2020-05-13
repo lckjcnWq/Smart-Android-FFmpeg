@@ -27,7 +27,7 @@
         </activity>
         <activity android:name=".view.AudioActivity"/>
         <activity android:name=".view.VideoActivity"/>
-        <activity android:name=".view.AudioFormatChangeFFmpegActivity"/>
+        <activity android:name=".view.AudioFormatChangeMediaCodecActivity"/>
         <activity android:name=".view.AudioRecordFFmpegActivity"/>
         <activity android:name=".view.AudioRecordMediaCodecActivity"/>
         <activity android:name=".view.CameraFFmpegPushRtmpActivity"/>

@@ -361,7 +361,7 @@ Java_com_example_lammy_ffmpegdemo_ffmpeg_FFmpegHandle_initVideo(JNIEnv *env, jcl
     //目标的码率，即采样的码率；显然，采样码率越大，视频大小越大
     pCodecCtx->bit_rate = 400000;
     //固定允许的码率误差，数值越大，视频越小
-//    pCodecCtx->bit_rate_tolerance = 4000000;
+//  pCodecCtx->bit_rate_tolerance = 4000000;
     pCodecCtx->gop_size = 50;
     /* Some formats want stream headers to be separate. */
     if (ofmt_ctx->oformat->flags & AVFMT_GLOBALHEADER)

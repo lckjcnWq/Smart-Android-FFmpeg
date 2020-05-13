@@ -13,7 +13,6 @@ import kotlinx.android.synthetic.main.activity_audio.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import java.io.File
 
 
 class AudioActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
@@ -38,7 +37,7 @@ class AudioActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
             }
         })
         btn_audio_change_by_MediaCodec.setOnClickListener(View.OnClickListener {
-            startActivity(Intent().setClass(this,AudioFormatChangeFFmpegActivity::class.java))
+            startActivity(Intent().setClass(this,AudioFormatChangeMediaCodecActivity::class.java))
         })
         btn_aac_MediaCodec.setOnClickListener(View.OnClickListener {
             startActivity(Intent().setClass(this,AudioRecordMediaCodecActivity::class.java))

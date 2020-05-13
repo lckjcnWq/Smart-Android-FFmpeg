@@ -26,7 +26,7 @@ import java.io.OutputStream
 import java.util.concurrent.Executors
 
 /**
- * Desc :
+ * Desc :将摄像头采集的数据data进行视频编码MediaCodec输出到flv包中
  * Modified :
  */
 class CameraMediaCodecFileActivity : Activity(), SurfaceHolder.Callback {
