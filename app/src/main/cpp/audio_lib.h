@@ -302,5 +302,20 @@ static void encode(AVCodecContext *enc_ctx,
     }
 }
 
+static  void DirectoryOperations(){
+
+    AVIODirContext *ctx=NULL;
+    AVIODirEntry *entry=NULL;
+    int ret = avio_open_dir(&ctx, "./", NULL);
+    while (1){
+        ret=avio_read_dir(ctx, &entry);
+        if(!entry){
+            break;
+        }
+    }
+
+}
+
+
 
 #endif

@@ -36,6 +36,7 @@
         <activity android:name=".view.VideoCompoundFileActivity"/>
         <activity android:name=".view.VideoFileRtmpFFmpegActivity"/>
         <activity android:name=".view.VideoFileRtmpRtmpDumpActivity"/>
+        <activity android:name=".view.VideoActivity"/>
     </application>
 
 </manifest>

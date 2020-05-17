@@ -290,8 +290,6 @@ public class VideoComponent {
                 byte temp = buffer[i];
                 buffer[i] = buffer[i + uSize];
                 buffer[i + uSize] = temp;
-//            char x = 128;
-//            buf[i] = (byte) x;
             }
         } else {
             throw new RuntimeException("sorry.you must convert by yourself");

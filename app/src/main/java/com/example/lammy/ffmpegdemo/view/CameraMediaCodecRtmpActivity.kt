@@ -28,7 +28,7 @@ import java.util.*
 import java.util.concurrent.Executors
 
 /**
- * Desc :
+ * Desc :将摄像头采集的数据data--->视频编码MediaCodec(H264硬编码)--->推流到rmpt服务器
  * Modified :
  */
 class CameraMediaCodecRtmpActivity : Activity(), SurfaceHolder.Callback {

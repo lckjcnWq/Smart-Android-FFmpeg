@@ -17,7 +17,7 @@ import com.example.lammy.ffmpegdemo.widget.UiSurfaceView
 import java.util.concurrent.Executors
 
 /**
- * Desc : 将摄像头采集的数据data由H264编码成yuv格式然后进行推送
+ * Desc : 将摄像头采集的数据data--->YUV---->H264编码然后进行推送到rtmp
  * Modified :
  */
 class CameraFFmpegPushRtmpActivity : Activity(), SurfaceHolder.Callback {
@@ -26,8 +26,7 @@ class CameraFFmpegPushRtmpActivity : Activity(), SurfaceHolder.Callback {
     private var HEIGHT = 480
     private var mHolder: SurfaceHolder? = null
 
-    //    private String url = "rtmp://192.168.31.127/live/test";
-    private val url = "/sdcard/input_test.flv"
+    private val url = "rtmp://192.168.31.127/live/test";
 
     //采集到每帧数据时间
     var previewTime: Long = 0

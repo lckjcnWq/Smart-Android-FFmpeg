@@ -28,11 +28,11 @@
         <Button
             android:id="@+id/btn_ffmpeg_rmpt"
             style="@style/BtnMain"
-            android:text="开启摄像头进行视频编码(ffmpeg),输出到文件/RMPT"/>
+            android:text="开启摄像头进行视频编码(ffmpeg),推流到rmpt服务器上"/>
         <Button
             android:id="@+id/btn_MediaCodec_flv"
             style="@style/BtnMain"
-            android:text="开启摄像头进行视频编码(MediaCodec),输出到文件/FLV"/>
+            android:text="开启摄像头进行视频编码(MediaCodec),以文件flv格式输出"/>
         <Button
             android:id="@+id/btn_ffmpeg_rmpt_io"
             style="@style/BtnMain"

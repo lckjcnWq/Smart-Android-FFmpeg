@@ -47,7 +47,7 @@ class VideoActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
             startActivity(Intent().setClass(this,CameraMediaCodecRtmpActivity::class.java))
         })
         btn_merge.setOnClickListener(View.OnClickListener {
-            startActivity(Intent().setClass(this,AudioRecordFFmpegActivity::class.java))
+            startActivity(Intent().setClass(this,VideoCompoundFileActivity::class.java))
         })
     }
 }

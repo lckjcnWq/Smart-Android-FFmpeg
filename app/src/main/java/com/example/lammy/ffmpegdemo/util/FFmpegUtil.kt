@@ -15,7 +15,6 @@ object FFmpegUtil {
         System.loadLibrary("swresample-2")
         System.loadLibrary("swscale-4")
     }
-    //音频相关
     @JvmStatic
     external fun openAudioDevice():Int
 
