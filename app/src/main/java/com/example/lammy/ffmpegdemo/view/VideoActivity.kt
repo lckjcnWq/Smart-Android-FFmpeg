@@ -49,5 +49,8 @@ class VideoActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
         btn_merge.setOnClickListener(View.OnClickListener {
             startActivity(Intent().setClass(this,VideoCompoundFileActivity::class.java))
         })
+        btn_video_cut.setOnClickListener(View.OnClickListener {
+            startActivity(Intent().setClass(this,VideoPlayActivity::class.java))
+        })
     }
 }

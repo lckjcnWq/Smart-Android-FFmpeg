@@ -41,7 +41,10 @@
             android:id="@+id/btn_merge"
             style="@style/BtnMain"
             android:text="音视频合成,存到flv中"/>
-
+        <Button
+            android:id="@+id/btn_video_cut"
+            style="@style/BtnMain"
+            android:text="视频裁剪以及简易播放器播放"/>
     </LinearLayout>
 
 </ScrollView>

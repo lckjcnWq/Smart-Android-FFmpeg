@@ -14,6 +14,8 @@ extern "C" {
 //引入时间
 #include "libavutil/time.h"
 #include "libavutil/imgutils.h"
+#include "libavformat/avformat.h"
+#include "libavutil/timestamp.h"
 }
 
 #include <iostream>

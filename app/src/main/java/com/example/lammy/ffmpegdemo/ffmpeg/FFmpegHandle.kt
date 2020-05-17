@@ -41,4 +41,5 @@ object FFmpegHandle {
 
     @JvmStatic
     external fun close(): Int
+
 }

@@ -14,13 +14,13 @@
         android:orientation="vertical"
         >
         <Button
-            android:id="@+id/btn_audio_about"
+            android:id="@+id/btn_video_cut"
             style="@style/BtnMain"
-            android:text="音频相关"/>
+            android:text="视频裁剪"/>
         <Button
-            android:id="@+id/btn_medio_about"
+            android:id="@+id/btn_video_play"
             style="@style/BtnMain"
-            android:text="视频相关"/>
+            android:text="视频播放"/>
 
     </LinearLayout>
 
