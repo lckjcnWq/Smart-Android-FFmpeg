@@ -1,4 +1,4 @@
-package com.example.lammy.ffmpegdemo.view
+package com.example.lammy.ffmpegdemo.view.audio
 
 import android.content.Intent
 import android.os.Bundle
@@ -37,13 +37,13 @@ class AudioActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
             }
         })
         btn_audio_change_by_MediaCodec.setOnClickListener(View.OnClickListener {
-            startActivity(Intent().setClass(this,AudioFormatChangeMediaCodecActivity::class.java))
+            startActivity(Intent().setClass(this, AudioFormatChangeMediaCodecActivity::class.java))
         })
         btn_aac_MediaCodec.setOnClickListener(View.OnClickListener {
-            startActivity(Intent().setClass(this,AudioRecordMediaCodecActivity::class.java))
+            startActivity(Intent().setClass(this, AudioRecordMediaCodecActivity::class.java))
         })
         btn_aac_ffmpeg.setOnClickListener(View.OnClickListener {
-            startActivity(Intent().setClass(this,AudioRecordFFmpegActivity::class.java))
+            startActivity(Intent().setClass(this, AudioRecordFFmpegActivity::class.java))
         })
     }
 }

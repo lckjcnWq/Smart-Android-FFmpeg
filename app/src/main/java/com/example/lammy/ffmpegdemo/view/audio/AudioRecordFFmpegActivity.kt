@@ -1,4 +1,4 @@
-package com.example.lammy.ffmpegdemo.view
+package com.example.lammy.ffmpegdemo.view.audio
 
 import android.media.AudioFormat
 import android.media.AudioRecord

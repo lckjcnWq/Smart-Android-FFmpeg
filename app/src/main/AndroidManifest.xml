@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.lammy.ffmpegdemo">
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -18,25 +19,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.SplashActivity">
+        <activity android:name=".view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.AudioActivity"/>
-        <activity android:name=".view.VideoActivity"/>
-        <activity android:name=".view.AudioFormatChangeMediaCodecActivity"/>
-        <activity android:name=".view.AudioRecordFFmpegActivity"/>
-        <activity android:name=".view.AudioRecordMediaCodecActivity"/>
-        <activity android:name=".view.CameraFFmpegPushRtmpActivity"/>
-        <activity android:name=".view.CameraMediaCodecFileActivity"/>
-        <activity android:name=".view.CameraMediaCodecRtmpActivity"/>
-        <activity android:name=".view.VideoCompoundFileActivity"/>
-        <activity android:name=".view.VideoFileRtmpFFmpegActivity"/>
-        <activity android:name=".view.VideoFileRtmpRtmpDumpActivity"/>
-        <activity android:name=".view.VideoActivity"/>
+        <activity android:name=".view.audio.AudioActivity"/>
+        <activity android:name=".view.video.VideoActivity"/>
+        <activity android:name=".view.audio.AudioFormatChangeMediaCodecActivity"/>
+        <activity android:name=".view.audio.AudioRecordFFmpegActivity"/>
+        <activity android:name=".view.audio.AudioRecordMediaCodecActivity"/>
+        <activity android:name=".view.video.CameraFFmpegPushRtmpActivity"/>
+        <activity android:name=".view.video.CameraMediaCodecFileActivity"/>
+        <activity android:name=".view.video.CameraMediaCodecRtmpActivity"/>
+        <activity android:name=".view.video.VideoCompoundFileActivity"/>
+        <activity android:name=".view.video.VideoFileRtmpFFmpegActivity"/>
+        <activity android:name=".view.video.VideoFileRtmpRtmpDumpActivity"/>
+        <activity android:name=".view.video.VideoActivity"
+            tools:ignore="DuplicateActivity" />
+        <activity android:name=".view.video.VideoPlayActivity"/>
     </application>
 
 </manifest>

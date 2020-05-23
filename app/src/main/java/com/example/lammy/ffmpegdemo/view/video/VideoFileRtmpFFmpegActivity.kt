@@ -1,4 +1,4 @@
-package com.example.lammy.ffmpegdemo.view
+package com.example.lammy.ffmpegdemo.view.video
 
 import android.os.Bundle
 import android.view.View

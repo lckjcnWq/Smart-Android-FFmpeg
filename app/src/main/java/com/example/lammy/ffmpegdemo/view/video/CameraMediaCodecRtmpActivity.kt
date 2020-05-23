@@ -1,4 +1,4 @@
-package com.example.lammy.ffmpegdemo.view
+package com.example.lammy.ffmpegdemo.view.video
 
 import android.app.Activity
 import android.graphics.ImageFormat
@@ -6,38 +6,37 @@ import android.hardware.Camera
 import android.hardware.Camera.PreviewCallback
 import android.media.MediaCodec
 import android.media.MediaCodecInfo
+import android.media.MediaCodecList
 import android.media.MediaFormat
 import android.os.Bundle
+import android.os.Environment
 import android.view.SurfaceHolder
-import android.widget.FrameLayout
+import android.view.View
+import android.widget.Toast
 import com.example.ffmpeg_lib.device.CameraController
 import com.example.ffmpeg_lib.flv.FlvPacker
 import com.example.ffmpeg_lib.flv.Packer
-import com.example.ffmpeg_lib.utils.FileUtil
-import com.example.ffmpeg_lib.utils.IOUtils
 import com.example.ffmpeg_lib.utils.LogUtils
-import com.example.ffmpeg_lib.utils.PhoneUtils
-import com.example.ffmpeg_lib.video.VideoComponent
 import com.example.lammy.ffmpegdemo.R
+import com.example.lammy.ffmpegdemo.ffmpeg.FFmpegHandle
+import com.example.lammy.ffmpegdemo.rtmp.RtmpHandle
 import com.example.lammy.ffmpegdemo.widget.UiSurfaceView
 import java.io.File
 import java.io.IOException
 import java.io.OutputStream
+import java.util.*
 import java.util.concurrent.Executors
 
 /**
- * Desc :将摄像头采集的数据data--->视频编码MediaCodec(H264硬编码)--->生成flv文件
+ * Desc :将摄像头采集的数据data--->视频编码MediaCodec(H264硬编码)--->推流到rmpt服务器
  * Modified :
  */
-class CameraMediaCodecFileActivity : Activity(), SurfaceHolder.Callback {
-    var executor = Executors.newSingleThreadExecutor()
+class CameraMediaCodecRtmpActivity : Activity(), SurfaceHolder.Callback {
     private var sv: UiSurfaceView? = null
-
-    //建议的视频宽度，不超过这个宽度，自动寻找4：3的尺寸
-    private val SUGGEST_PREVIEW_WIDTH = 640
-    private var videoWidth = 0
-    private var videoHeight = 0
+    private val WIDTH = 480
+    private val HEIGHT = 320
     private var mHolder: SurfaceHolder? = null
+    private val url = "rtmp://192.168.31.127/live/test"
 
     //采集到每帧数据时间
     var previewTime: Long = 0
@@ -52,45 +51,63 @@ class CameraMediaCodecFileActivity : Activity(), SurfaceHolder.Callback {
     var encodeCount = 0
 
     //采集数据回调
-    private var mPreviewFrameCallback: PreviewFrameCallback? = null
+    private var mStreamIt: StreamIt? = null
     private var mMediaCodec: MediaCodec? = null
+    private val DATA_DIR = Environment.getExternalStorageDirectory().toString() + File.separator + "AndroidVideo"
     private var mFlvPacker: FlvPacker? = null
     private val FRAME_RATE = 15
-    private var mOutStream: OutputStream? = null
-
-    //视频编码组件封装
-    private var mVideoComponent: VideoComponent? = null
+    private val mOutStream: OutputStream? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_camera)
         init()
     }
 
+    var pushExecutor = Executors.newSingleThreadExecutor()
     private fun init() {
+        FFmpegHandle.initVideo(url, WIDTH, HEIGHT)
         sv = findViewById(R.id.sv)
-        mVideoComponent = VideoComponent()
-        mPreviewFrameCallback = PreviewFrameCallback()
-        initCamera()
         initMediaCodec()
         mFlvPacker = FlvPacker()
-        mFlvPacker!!.initVideoParams(videoWidth, videoHeight, FRAME_RATE)
-            mFlvPacker!!.setPacketListener(Packer.OnPacketListener { data, packetType ->
-                IOUtils.write(mOutStream, data, 0, data.size)
-                LogUtils.w(data.size.toString() + " " + packetType)
-            })
+        mFlvPacker!!.initVideoParams(WIDTH, HEIGHT, FRAME_RATE)
+        mFlvPacker!!.setPacketListener(Packer.OnPacketListener { data, packetType ->
+            pushExecutor.execute {
+                val ret: Int = RtmpHandle.push(data, data.size)
+                LogUtils.w("type：" + packetType + "  length:" + data.size + "  推流结果:" + ret)
+            }
+        })
+        mStreamIt = StreamIt()
+        CameraController.getInstance().open(1)
+        val params: Camera.Parameters = CameraController.getInstance().getParams()
+        params.pictureFormat = ImageFormat.YV12
+        params.previewFormat = ImageFormat.YV12
+        params.setPictureSize(WIDTH, HEIGHT)
+        params.setPreviewSize(WIDTH, HEIGHT)
+        params.setPreviewFpsRange(15000, 20000)
+        val focusModes = params.supportedFocusModes
+        if (focusModes.contains("continuous-video")) {
+            params.focusMode = Camera.Parameters.FOCUS_MODE_CONTINUOUS_VIDEO
+        }
+        CameraController.getInstance().resetParams(params)
+        mHolder = sv!!.getHolder()
+        mHolder!!.addCallback(this)
     }
 
     private fun initMediaCodec() {
-        val bitrate = 2 * videoWidth * videoHeight * FRAME_RATE / 20
+        val bitrate = 2 * WIDTH * HEIGHT * FRAME_RATE / 20
         try {
-            val mediaCodecInfo: MediaCodecInfo = mVideoComponent!!.getSupportMediaCodecInfo(VCODEC_MIME)
-                    ?: throw RuntimeException("mediaCodecInfo is Empty")
+            val mediaCodecInfo = selectCodec(VCODEC_MIME)
+            if (mediaCodecInfo == null) {
+                Toast.makeText(this, "mMediaCodec null", Toast.LENGTH_LONG).show()
+                throw RuntimeException("mediaCodecInfo is Empty")
+            }
+            LogUtils.w("MediaCodecInfo " + mediaCodecInfo.name)
             mMediaCodec = MediaCodec.createByCodecName(mediaCodecInfo.name)
-            val mediaFormat = MediaFormat.createVideoFormat(VCODEC_MIME, videoWidth, videoHeight)
+            val mediaFormat = MediaFormat.createVideoFormat(VCODEC_MIME, WIDTH, HEIGHT)
             mediaFormat.setInteger(MediaFormat.KEY_BIT_RATE, bitrate)
             mediaFormat.setInteger(MediaFormat.KEY_FRAME_RATE, FRAME_RATE)
             mediaFormat.setInteger(MediaFormat.KEY_COLOR_FORMAT,
-                    mVideoComponent!!.getSupportMediaCodecColorFormat(mediaCodecInfo))
+                    MediaCodecInfo.CodecCapabilities.COLOR_FormatYUV420Planar)
             mediaFormat.setInteger(MediaFormat.KEY_I_FRAME_INTERVAL, 1)
             mMediaCodec!!.configure(mediaFormat, null, null, MediaCodec.CONFIGURE_FLAG_ENCODE)
             mMediaCodec!!.start()
@@ -99,47 +116,37 @@ class CameraMediaCodecFileActivity : Activity(), SurfaceHolder.Callback {
         }
     }
 
-    private fun initCamera() {
-        CameraController.getInstance().open(0)
-        val params: Camera.Parameters = CameraController.getInstance().getParams()
-        //查找合适的预览尺寸
-        val size: Camera.Size = mVideoComponent!!.getSupportPreviewSize(params, SUGGEST_PREVIEW_WIDTH)
-                ?: throw RuntimeException("not found support preview size")
-        videoWidth = size.width
-        videoHeight = size.height
-        params.pictureFormat = ImageFormat.JPEG
-        params.previewFormat = mVideoComponent!!.getSupportPreviewColorFormat(params)
-        //      params.setPictureSize(videoWidth, videoHeight);
-        params.setPreviewSize(videoWidth, videoHeight)
-        params.setPreviewFpsRange(15000, 20000)
-        val focusModes = params.supportedFocusModes
-        if (focusModes.contains("continuous-video")) {
-            params.focusMode = Camera.Parameters.FOCUS_MODE_CONTINUOUS_VIDEO
-        }
-        CameraController.getInstance().adjustOrientation(this, CameraController.OnOrientationChangeListener {
-            val lp = sv!!.getLayoutParams() as FrameLayout.LayoutParams
-            LogUtils.d(PhoneUtils.getWidth().toString() + " " + PhoneUtils.getHeight())
-            if (it == 90) {
-                lp.height = PhoneUtils.getWidth() * videoWidth / videoHeight
-            } else {
-                lp.height = PhoneUtils.getWidth() * videoHeight / videoWidth
+    private fun selectCodec(mimeType: String): MediaCodecInfo? {
+        val numCodecs = MediaCodecList.getCodecCount()
+        for (i in 0 until numCodecs) {
+            val codecInfo = MediaCodecList.getCodecInfoAt(i)
+            //是否是编码器
+            if (!codecInfo.isEncoder) {
+                continue
             }
-            sv!!.setLayoutParams(lp)
-        })
-        CameraController.getInstance().resetParams(params)
-        mHolder = sv!!.getHolder()
-        mHolder!!.addCallback(this)
+            val types = codecInfo.supportedTypes
+            LogUtils.w(Arrays.toString(types))
+            for (type in types) {
+                LogUtils.e("equal " + mimeType.equals(type, ignoreCase = true))
+                if (mimeType.equals(type, ignoreCase = true)) {
+                    LogUtils.e("codecInfo " + codecInfo.name)
+                    return codecInfo
+                }
+            }
+        }
+        return null
     }
 
     override fun onDestroy() {
         super.onDestroy()
+        FFmpegHandle.close()
         CameraController.getInstance().close()
     }
 
     override fun onResume() {
         super.onResume()
         if (mHolder != null) {
-            CameraController.getInstance().startPreview(mHolder, mPreviewFrameCallback)
+            CameraController.getInstance().startPreview(mHolder, mStreamIt)
         }
     }
 
@@ -150,8 +157,12 @@ class CameraMediaCodecFileActivity : Activity(), SurfaceHolder.Callback {
 
     override fun surfaceCreated(holder: SurfaceHolder) {
         mFlvPacker!!.start()
-        mOutStream = IOUtils.open(FileUtil.getMainDir().toString() + File.separator + "/CameraMediaCodecFileActivity.flv", true)
-        CameraController.getInstance().startPreview(mHolder, mPreviewFrameCallback)
+        //        mOutStream = IOUtils.open(DATA_DIR + File.separator + "/easy.flv", true);
+        CameraController.getInstance().startPreview(mHolder, mStreamIt)
+        pushExecutor.execute {
+            val ret: Int = RtmpHandle.connect("rtmp://192.168.31.127/live")
+            LogUtils.w("打开RTMP连接: $ret")
+        }
     }
 
     override fun surfaceChanged(holder: SurfaceHolder, format: Int, width: Int, height: Int) {}
@@ -159,10 +170,14 @@ class CameraMediaCodecFileActivity : Activity(), SurfaceHolder.Callback {
         mFlvPacker!!.stop()
         CameraController.getInstance().stopPreview()
         CameraController.getInstance().close()
-        IOUtils.close(mOutStream)
+        val ret: Int = RtmpHandle.close()
+        LogUtils.w("关闭RTMP连接：$ret")
+        //        IOUtils.close(mOutStream);
     }
 
-    inner class PreviewFrameCallback : PreviewCallback {
+    var executor = Executors.newSingleThreadExecutor()
+    fun btnStart(view: View?) {}
+    inner class StreamIt : PreviewCallback {
         override fun onPreviewFrame(data: ByteArray, camera: Camera) {
             val endTime = System.currentTimeMillis()
             executor.execute {
@@ -176,9 +191,15 @@ class CameraMediaCodecFileActivity : Activity(), SurfaceHolder.Callback {
         }
     }
 
-    private fun flvPackage(bufSou: ByteArray) {
-        //编码格式转换
-        val buf: ByteArray = mVideoComponent!!.convert(bufSou)
+    private fun flvPackage(buf: ByteArray) {
+        val LENGTH = HEIGHT * WIDTH
+        //YV12数据转化成COLOR_FormatYUV420Planar
+        LogUtils.d(LENGTH.toString() + "  " + (buf.size - LENGTH))
+        for (i in LENGTH until LENGTH + LENGTH / 4) {
+            val temp = buf[i]
+            buf[i] = buf[i + LENGTH / 4]
+            buf[i + LENGTH / 4] = temp
+        }
         val inputBuffers = mMediaCodec!!.inputBuffers
         val outputBuffers = mMediaCodec!!.outputBuffers
         try {

@@ -7,13 +7,15 @@ import androidx.databinding.ViewDataBinding
 import com.aleyn.mvvm.base.BaseActivity
 import com.aleyn.mvvm.base.NoViewModel
 import com.example.lammy.ffmpegdemo.R
+import com.example.lammy.ffmpegdemo.view.audio.AudioActivity
+import com.example.lammy.ffmpegdemo.view.video.VideoActivity
 import com.hjq.permissions.OnPermission
 import com.hjq.permissions.Permission
 import com.hjq.permissions.XXPermissions
 import kotlinx.android.synthetic.main.activity_splash.*
 
 
-class SplashActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
+class MainActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
     override fun layoutId(): Int {
         return R.layout.activity_splash
     }
@@ -34,11 +36,11 @@ class SplashActivity : BaseActivity<NoViewModel, ViewDataBinding>() {
 
     override fun initData() {
         btn_audio_about.setOnClickListener(View.OnClickListener {
-            startActivity(Intent().setClass(this,AudioActivity::class.java))
+            startActivity(Intent().setClass(this, AudioActivity::class.java))
         })
 
         btn_medio_about.setOnClickListener(View.OnClickListener {
-            startActivity(Intent().setClass(this,VideoActivity::class.java))
+            startActivity(Intent().setClass(this, VideoActivity::class.java))
         })
     }
 }

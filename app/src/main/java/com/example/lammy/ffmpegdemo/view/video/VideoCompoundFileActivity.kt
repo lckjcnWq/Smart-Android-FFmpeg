@@ -1,4 +1,4 @@
-package com.example.lammy.ffmpegdemo.view
+package com.example.lammy.ffmpegdemo.view.video
 
 import android.app.Activity
 import android.graphics.ImageFormat
